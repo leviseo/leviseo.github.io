@@ -1,3 +1,2 @@
-# levi.github.io
-user setting test
-user setting test22
+# study
+UI개발팀 -> Front-End개발팀 스터디

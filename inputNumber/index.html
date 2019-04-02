@@ -6,6 +6,11 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>inputNumber</title>
 	<style>
+		*{padding:0;margin:0;}
+		.group_number{display:flex;justify-content:center}
+		.group_number button[class^="btn"] {width:50px;height:50px;border:1px solid #eaeaea;font-size:20px;background-color:transparent}
+		.group_number .box_tf{position:relative;width:100px;height:50px;border:1px solid #eaeaea;box-sizing:border-box}
+		.group_number .tf_number{position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;text-align:center;box-sizing:border-box}
 	</style>
 </head>
 <body>
@@ -13,9 +18,28 @@
 	<div class="group_number">
 		<button type="button" id="btnMinus" class="btn_number">-</button>
 		<div class="box_tf">
-			<input type="text" class="tf_number">
+			<input type="text" id="tfNumber" value="0" class="tf_number">
 		</div>
 		<button type="button" id="btnPlus" class="btn_number">+</button>
 	</div>
 </body>
+<script>
+var btnMinus = document.getElementById('btnMinus');
+var btnPlus = document.getElementById('btnPlus');
+var tfNumber = document.getElementById('tfNumber');
+var tfNumberValue = parseInt(tfNumber.value);
+
+btnPlus.onclick = function (){
+	tfNumberValue = tfNumberValue + 1;
+	tfNumber.value = tfNumberValue;
+	console.log(tfNumberValue);
+};
+
+btnMinus.onclick = function () {
+	tfNumberValue = tfNumberValue - 1;
+	tfNumber.value = tfNumberValue;
+	console.log(tfNumberValue);
+};
+
+</script>
 </html>

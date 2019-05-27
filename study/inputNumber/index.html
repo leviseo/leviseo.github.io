@@ -18,7 +18,7 @@
 	<div class="group_number">
 		<button type="button" id="btnMinus" class="btn_number">-</button>
 		<div class="box_tf">
-			<input type="text" id="tfNumber" value="0" class="tf_number">
+			<input type="number" id="tfNumber" value="0" class="tf_number">
 		</div>
 		<button type="button" id="btnPlus" class="btn_number">+</button>
 	</div>
@@ -32,12 +32,19 @@ var tfNumberValue = parseInt(tfNumber.value, 10);
 btnPlus.onclick = function (){
 	tfNumberValue += 1;
 	tfNumber.value = tfNumberValue;
+	console.log(tfNumberValue);
 };
 
 btnMinus.onclick = function () {
 	tfNumberValue -= 1;
 	tfNumber.value = tfNumberValue;
+	console.log(tfNumberValue);
 };
+
+tfNumber.addEventListener('keyup', function() {
+	//방향키 눌렀을 때도 inset가 뜬다..ㅜ
+	console.log('insert');
+});
 
 </script>
 </html>

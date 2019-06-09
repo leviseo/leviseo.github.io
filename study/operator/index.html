@@ -19,7 +19,7 @@
 			</ul>
 		</li>
 		<li>BMI 계산
-			<p>getBMI(kg,m)</p>
+			<p>getBMI(kg,cm)</p>
 		</li>
 		<li>
 			섭씨를 화씨로 변환
@@ -44,9 +44,21 @@
 		1-2. 정수 판별 -> 구글 검색 결과 1번 Number.isInteger() 
 		-> 결과값이 true 일 때만 계산하자 
 		-> true/false 체크하는 함수를 따로 빼내자
-		-> 써줘야하는 문제 : 삼항연산자 라는 녀석
+		-> 써줘야하는 문제 : 삼항연산자 라는 녀석 // 완 - 리뷰
+		* 리뷰 후 리펙토링 todo
+		1-3. prompt를 사용하여 숫자1, 숫자2 를 입력받아 사칙연산 네개의 결과값을 모두 한번에 출력
+		-> prompt 로 받은 녀석은 전부 string... check를 우짠디...
+		-> 값을 안넣으면 전부 0, 0 .. / 만 NaN 우짠디..
+		-> 
 		*/
+		var a = Number(prompt('숫자1 입력'));
+		var b = Number(prompt('숫자2 입력'));
 
+		console.log('숫자1 + 숫자2 = ' + plus(a, b));
+		console.log('숫자1 - 숫자2 = ' + minus(a, b));
+		console.log('숫자1 * 숫자2 = ' + multiply(a, b));
+		console.log('숫자1 / 숫자2 = ' + divide(a, b));
+		
 		function check(a, b) {
 			return Number.isInteger(a) && Number.isInteger(b);
 		}
@@ -66,18 +78,21 @@
 		function divide(a, b) {
 			return (check(a, b) ? a / b : '계산불가')
 		}
-
+		
 		/*
 		2. BMI를 계산하는 프로그램을 작성해 봅시다.
-		2-1. 체중kg / 키m*키m
+		2-1. 체중kg / 키m*키m (공식 : http://www.marathon.pe.kr/diet/bmi_cal.html)
 		2-2. 연산하는 함수를 만들어서 실행시키면 끝 아니야?
 		2-3. 소수점 한자리까지 -> toFixed -> 문자로 나옴... (Math.round 소수점 반올림)
 		2-4. parseFloat (친구 : parseInt)
 		: 얘도 함수로 만들어 놓자
+
+		-> 키가 m 단위라 귀찮다.. cm로 바꿔놓자
+		-> 소수점 두자리 노출로 수정
 		*/
 		function getBMI(w, h) {
-			var formula = w / (h * h);
-			return parseFloat(formula.toFixed(1));
+			var formula = w / (h / 100 * h / 100);
+			return parseFloat(formula.toFixed(2));
 		}
 		/*
 		3. 섭씨를 입력받아서 화씨로 바꾸는 프로그램을 작성해 봅시다.

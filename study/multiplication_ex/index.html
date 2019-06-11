@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>multiplication_ex</title>
+</head>
+<body>
+	<div id="box"></div>
+	<script>
+		'use strict';
+		//구구단.. 2단 / 3단
+		/*
+		* for의 특성을 먼저 익히자 https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/for
+		1. 함수를 만들자 - 그 안에 for 문을 넣자
+
+		html에 값이 출력되는 것을 경험한다
+		innerText / innerHTML
+		-> consloe은 결과가 전부 출력, html에는 마지막 a*9만 출력..
+		-> += 굉장한 녀석
+
+		-> consoloe 에 찍는 함수랑 html에 그려지는 함수를 분리할 수 없을까...
+		
+		*/
+		var box = document.getElementById('box');
+
+		multiplication(2);
+		multiplication(3);
+
+		function multiplication(a) {
+			for (var i = 1; i < 10; i++) {
+				var result = a * i;
+				console.log(a + ' * ' + i + ' = ' + result);
+				box.innerHTML += a + ' * ' + i + ' = ' + result + '<br>'; 
+			};
+		};
+
+	</script>
+</body>
+</html>

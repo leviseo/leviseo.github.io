@@ -15,17 +15,15 @@
 	-> 노선변경 b 에는 일단 2로 고정하고.. a 만해서 일단 만들었다
 	4. 현재 2 가 있는 자리에.. 2부터  1 < a 까지 숫자가 들어와야한다 
 	-> 그때 강의에서 들은 break 라는 녀석이 문득 생각나서 적어봄
-
-	소수 판별 프로그램인데 소수가 아닌 것을 먼저 잡아내는게 이상한 것 같다..
-
 	*/
 
 	'use strict';
 	let a = Number(prompt('2이상의 정수만 입력해주세요'));
+	let isPrime = false;
 
-	check(a);
+	check(a); // 함수 실행 
 
-	function check(a) {
+	function check(a) { // 함수 정의
 		// if (a % 2 === 0) {
 		// 	console.log('소수가 아님');
 		// } else {
@@ -33,13 +31,22 @@
 		// }
 
 		for (let i = 2; i < a; i++) {
+			console.log('?', i, a);
 			if (a % i === 0) {
-				console.log('소수가 아님');
-				break
+				console.log('i', i);
+				console.log('나눠져');
+				isPrime = false;
+				break;
 			} else {
-				console.log('소수');
-				break
+				console.log('i', i);
+				console.log('안나눠짐');
+				isPrime = true;
 			};
+		}
+		if (isPrime) {
+			document.write('소수');
+		} else {
+			document.write('소수가 아닙니다');
 		}
 	};
 

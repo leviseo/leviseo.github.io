@@ -23,16 +23,16 @@
 
 	check(inputNumber); // 함수 실행 
 
-	function check(a) { // 함수 정의
+	function check(number) { // 함수 정의
 		// if (a % 2 === 0) {
 		// 	console.log('소수가 아님');
 		// } else {
 		// 	console.log('소수일 수도 있음');
 		// }
 
-		for (let i = 2; i < inputNumber; i++) {
-			console.log('?', i, inputNumber);
-			if (inputNumber % i === 0) {
+		for (let i = 2; i < number; i++) {
+			console.log('?', i, number);
+			if (number % i === 0) {
 				console.log('i', i);
 				console.log('나눠짐');
 				isPrime = false;

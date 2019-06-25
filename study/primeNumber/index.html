@@ -18,10 +18,10 @@
 	*/
 
 	'use strict';
-	let a = Number(prompt('2이상의 정수만 입력해주세요'));
+	let inputNumber = Number(prompt('2이상의 정수만 입력해주세요'));
 	let isPrime = false;
 
-	check(a); // 함수 실행 
+	check(inputNumber); // 함수 실행 
 
 	function check(a) { // 함수 정의
 		// if (a % 2 === 0) {
@@ -30,11 +30,11 @@
 		// 	console.log('소수일 수도 있음');
 		// }
 
-		for (let i = 2; i < a; i++) {
-			console.log('?', i, a);
-			if (a % i === 0) {
+		for (let i = 2; i < inputNumber; i++) {
+			console.log('?', i, inputNumber);
+			if (inputNumber % i === 0) {
 				console.log('i', i);
-				console.log('나눠져');
+				console.log('나눠짐');
 				isPrime = false;
 				break;
 			} else {
@@ -45,8 +45,10 @@
 		}
 		if (isPrime) {
 			document.write('소수');
+			console.log('소수');
 		} else {
 			document.write('소수가 아닙니다');
+			console.log('소수가 아닙니다');
 		}
 	};
 

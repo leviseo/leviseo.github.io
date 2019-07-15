@@ -24,18 +24,29 @@
 		
 		*/
 		var box = document.getElementById('box');
-
+		
 		multiplication(2);
 		multiplication(3);
 
 		function multiplication(a) {
+			var result = [];
 			for (var i = 1; i < 10; i++) {
-				var result = a * i;
-				console.log(a + ' * ' + i + ' = ' + result);
-				box.innerHTML += a + ' * ' + i + ' = ' + result + '<br>'; 
+				result.push( a * i );
+				// var result = a * i;
+				// console.log(a + ' * ' + i + ' = ' + result);
+				// box.innerHTML += a + ' * ' + i + ' = ' + result + '<br>'; 
 			};
+			console.log(result);
 		};
 		// 풀리퀘 테스트
+
+		var animals = [];
+
+animals.push('cows')
+
+
+console.log(animals);
+
 	</script>
 </body>
 </html>

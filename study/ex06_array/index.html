@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>array1</title>
+</head>
+<body>
+	<strong>힌트</strong>
+	<ol>
+		<li>2단을 구현하기 위해 배열을 생성한다.</li>
+		<li>for문을 돌면서 구구단 실행 결과를 배열에 저장한다.</li>
+		<li>배열의 크기 만큼 for 문을 통해 결과를 출력한다.</li>
+	</ol>
+</body>
+<script>
+//2중 반복문 2단 ~ 9단까지 배열 가용하는 걸로
+/*
+1. for문으로 구구단을 만들자
+2. 배열에 담자
+3. for문을 하나 더 쓰자
+ ㄴ 이건 함수에 어떻게 담지
+*/
+'use strict';
+// 1번
+
+let result = [];
+
+array99(2);
+
+function array99(number) {
+	for (let i = 1; i < 10; i++) {
+		let gugu = number * i;
+		result.push(gugu);
+	}
+	console.log(result);
+	document.write(result);
+}
+
+/*
+let result2 = [];
+
+gugu(9);
+write();
+
+function gugu() {
+	for (let n = 1; n < 10; n++) {
+		for (let i = 1; i < 10; i++) {
+			let gugu = n * i;
+			result2.push(gugu);
+		}
+	}
+	return result2;
+}
+
+function write() {
+	console.log(result2);
+	document.write(result2);
+}
+*/
+</script>
+</html>

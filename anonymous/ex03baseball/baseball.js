@@ -45,7 +45,6 @@ var 틀린횟수창 = document.createElement('p');
 			var 뽑은것 = 숫자후보.splice(Math.floor(Math.random() * 숫자후보.length), 1)[0];
 			숫자배열.push(뽑은것);
 		}
-		console.log(숫자배열);
 		틀린횟수 = 0;
 		틀린횟수창.textContent = '틀린횟수 : ' + 틀린횟수;
 	} else {
@@ -56,18 +55,7 @@ var 틀린횟수창 = document.createElement('p');
 		if (틀린횟수 > 10) {
 			//10번 넘게 틀린 경우
 			결과창.textContent = '10번 넘게 틀려서 게임오버! 정답은' + 숫자배열 + '입니다!';
-			//새로운 문제 제출
-			입력창.value = '';
-			입력창.focus();
-
-			숫자후보 = [1,2,3,4,5,6,7,8,9];
-			숫자배열 = [];
-			for (let i = 0; i < 4; i++) {
-				var 뽑은것 = 숫자후보.splice(Math.floor(Math.random() * 숫자후보.length), 1)[0];
-				숫자배열.push(뽑은것);
-			}
-			console.log(숫자배열);
-
+			입력창.disabled = 'disabled';
 		} else {
 			//10번 미만으로 틀린 경우
 			var 답배열 = 입력창.value.split('');

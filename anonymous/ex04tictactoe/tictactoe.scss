@@ -1,0 +1,20 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	max-width: 500px;
+	border : {
+		bottom :1px solid #000;
+		left: 1px solid #000;
+	}
+	.row {
+		display: flex;
+	}
+	.col {
+		width: 33.33%;
+		padding-top: 33.33%;
+		border : {
+			top :1px solid #000;
+			right: 1px solid #000;
+		}
+	}
+}

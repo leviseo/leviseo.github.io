@@ -1,12 +1,12 @@
 var 숫자개수 = 3;
-var 남은횟수 = 10;
+var 남은횟수;
 var 숫자후보;
 var 숫자배열;
 
-function 문제출제(남은횟수) {
+function 문제출제() {
 	숫자후보 = [1,2,3,4,5,6,7,8,9];
 	숫자배열 = [];
-	남은횟수 = 남은횟수;
+	남은횟수 = 10;
 
 	for (let i = 0; i < 숫자개수; i++) {
 		var 랜덤숫자 = Math.floor(Math.random() * 숫자후보.length);
@@ -14,7 +14,7 @@ function 문제출제(남은횟수) {
 		숫자배열.push(뽑아낸숫자);
 	}	
 }
-문제출제(남은횟수);
+문제출제();
 
 // ---------------- DOM 
 var 바디 = document.body;
@@ -47,7 +47,7 @@ var 남은횟수창 = document.createElement('p');
 		입력창.focus();
 
 		//재출제
-		문제출제(남은횟수);
+		문제출제();
 	} else {
 
 	//횟수 제한
@@ -62,7 +62,7 @@ var 남은횟수창 = document.createElement('p');
 		입력창.focus();
 
 		//재출제
-		문제출제(남은횟수);
+		문제출제();
 	} else {
 		남은횟수 -= 1
 		//횟수 남아있음 지속

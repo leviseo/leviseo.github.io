@@ -53,9 +53,9 @@ var 비동기콜백 = function(이벤트) {
     //대각선 검사
     if (Math.abs(몇줄 - 몇칸) === 2) {
       if (
-        칸들[0][0].textContent === 턴 &&
+        칸들[0][2].textContent === 턴 &&
         칸들[1][1].textContent === 턴 &&
-        칸들[2][2].textContent === 턴
+        칸들[2][0].textContent === 턴
       ) {
         다참 = true;
       }

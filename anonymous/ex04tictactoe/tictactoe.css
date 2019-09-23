@@ -7,4 +7,5 @@ table td { width: 33.33%; height: 33.33%; border: 1px solid #000; font-weight: b
 
 p { text-align: center; }
 
-@media only screen and (orientation: landscape) { table { max-width: 100vh; max-height: 100vh; } }
+@media only screen and (orientation: landscape) { table { max-width: 100vh; max-height: 100vh; }
+  table td { font-size: 0.5em; } }

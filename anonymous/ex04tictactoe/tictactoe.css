@@ -1,12 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Varela+Round&display=swap");
-.container { display: -ms-grid; display: grid; width: 90vw; height: 90vw; margin: 0 auto; }
-
-.container .row { display: -ms-grid; display: grid; -ms-grid-columns: (3fr)[3]; grid-template-columns: repeat(3, 3fr); }
-
-.container .row .col { border: 1px solid #000; }
-
 body { margin: 0; padding: 0; }
 
 table { width: 100%; height: 100vw; max-width: 600px; max-height: 600px; margin: 0 auto; border-collapse: collapse; border-spacing: 0; border: 20px solid #fff; font-size: 20vw; table-layout: fixed; }
 
-table td { width: 33.33%; height: 33.33%; border: 1px solid #000; font-weight: bold; font-size: 1em; font-family: 'Varela Round', sans-serif; text-align: center; vertical-align: middle; }
+table td { width: 33.33%; height: 33.33%; border: 1px solid #000; font-weight: bold; font-size: 1em; font-family: "Varela Round", sans-serif; text-align: center; vertical-align: middle; cursor: pointer; }
+
+p { text-align: center; }
+
+@media only screen and (orientation: landscape) { table { max-width: 100vh; max-height: 100vh; } }

@@ -1,0 +1,21 @@
+.container {
+	display: grid;
+	grid-auto-rows: 33.33%;
+	width: 100vw;
+	height: 100vw;
+	max-width: 100%;
+	font-size: 1vw;
+	.row {
+		display: grid;
+		grid-template-columns: repeat(3, 3fr);
+	}
+	.col {
+		display: grid;
+		align-items: center;
+		height: 100%;
+		border: 1px solid #000;
+		font-size: 20em;
+		font-family: "Varela Round", sans-serif;
+		text-align: center;
+	}
+}

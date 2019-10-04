@@ -1,4 +1,4 @@
-# 개미는 뚠뚠
+## 개미는 뚠뚠
 1. 끝말잇기
 	* [pages](https://leviseo.github.io/anonymous/ex01word/index.html)
 	* [github](https://github.com/leviseo/leviseo.github.io/tree/master/anonymous/ex01word)

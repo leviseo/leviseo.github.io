@@ -7,7 +7,14 @@
 	<title>multiplication_ex</title>
 </head>
 <body>
-	<div id="box"></div>
+	<h1>구구단 연습</h1>
+	<ul>
+		<li>consloe은 결과가 전부 출력</li>
+		<li>html에는 마지막 a * 9 만 출력</li>
+	</ul>
+	<div id="box">
+		<h2>결과 출력창 ↓</h2>
+	</div>
 	<script>
 		'use strict';
 		//구구단.. 2단 / 3단
@@ -24,18 +31,21 @@
 		
 		*/
 		var box = document.getElementById('box');
-		
+
 		multiplication(2);
 		multiplication(3);
 
 		function multiplication(a) {
 			var result = [];
+			var desc = document.createElement('p');
 			for (var i = 1; i < 10; i++) {
 				result.push( a * i );
 				// var result = a * i;
 				// console.log(a + ' * ' + i + ' = ' + result);
-				// box.innerHTML += a + ' * ' + i + ' = ' + result + '<br>'; 
+				// box.innerHTML += a + ' * ' + i + ' = ' + result + '<br>';
 			};
+			box.appendChild(desc);
+			desc.innerText = a + ' * ' + result.length + ' = ' + result[result.length - 1];
 			console.log(result);
 		};
 /*

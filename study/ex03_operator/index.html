@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>operator</title>
+	<title>03. operator</title>
 </head>
+
 <body>
-	<h1>operator</h1>
-	<p>console로 보셔야합니다. (매우 불친절)</p>
+	<h1>03. operator</h1>
+	<h2>1) 사칙연산</h2>
 	<ol>
 		<li>사칙연산 <em>number외에는 '계산불가'</em>
 			<ul>
@@ -18,7 +20,7 @@
 				<li>divide(number)</li>
 			</ul>
 		</li>
-		<li>BMI 계산
+		<!-- <li>BMI 계산
 			<p>getBMI(kg,cm)</p>
 		</li>
 		<li>
@@ -28,57 +30,72 @@
 		<li>
 			입력한 문자열의 길이
 			<p>getLength(string)</p>
-		</li>
+		</li> -->
 	</ol>
+	<div class="box">
+		<strong>결과 출력창</strong>
+	</div>
 	<script>
-		'use strict';
-		/*
-		1. 두 수를 입력받아 4칙연산의 결과를 표시해 봅시다.
-		2. BMI를 계산하는 프로그램을 작성해 봅시다.
-		3. 섭씨를 입력받아서 화씨로 바꾸는 프로그램을 작성해 봅시다.
-		4. 입력한 문자열의 길이를 알려주는 프로그램을 작성해 봅시다.
-		*/
+		window.onload = function () {
+			'use strict';
+			/*
+			1. 두 수를 입력받아 4칙연산의 결과를 표시해 봅시다.
+			2. BMI를 계산하는 프로그램을 작성해 봅시다.
+			3. 섭씨를 입력받아서 화씨로 바꾸는 프로그램을 작성해 봅시다.
+			4. 입력한 문자열의 길이를 알려주는 프로그램을 작성해 봅시다.
+			*/
 
-		/*
-		1-1. 두 수를 입력받아 4칙연산의 결과를 표시해 봅시다.
-		1-2. 정수 판별 -> 구글 검색 결과 1번 Number.isInteger() 
-		-> 결과값이 true 일 때만 계산하자 
-		-> true/false 체크하는 함수를 따로 빼내자
-		-> 써줘야하는 문제 : 삼항연산자 라는 녀석 // 완 - 리뷰
-		* 리뷰 후 리펙토링 todo
-		1-3. prompt를 사용하여 숫자1, 숫자2 를 입력받아 사칙연산 네개의 결과값을 모두 한번에 출력
-		-> prompt 로 받은 녀석은 전부 string... check를 우짠디...
-		-> 값을 안넣거나 0을 넣으면 divide 만 NaN 우짠디..
-		-> check 에 (a + b !== 0) 추가
-		*/
-		var a = Number(prompt('숫자1 입력'));
-		var b = Number(prompt('숫자2 입력'));
+			/*
+			1-1. 두 수를 입력받아 4칙연산의 결과를 표시해 봅시다.
+			1-2. 정수 판별 -> 구글 검색 결과 1번 Number.isInteger() 
+			-> 결과값이 true 일 때만 계산하자 
+			-> true/false 체크하는 함수를 따로 빼내자
+			-> 써줘야하는 문제 : 삼항연산자 라는 녀석 // 완 - 리뷰
+			* 리뷰 후 리펙토링 todo
+			1-3. prompt를 사용하여 숫자1, 숫자2 를 입력받아 사칙연산 네개의 결과값을 모두 한번에 출력
+			-> prompt 로 받은 녀석은 전부 string... check를 우짠디...
+			-> 값을 안넣거나 0을 넣으면 divide 만 NaN 우짠디..
+			-> check 에 (a + b !== 0) 추가
+			*/
+			var a = Number(prompt('숫자1 입력'));
+			var b = Number(prompt('숫자2 입력'));
 
-		console.log('숫자1 + 숫자2 = ' + plus(a, b));
-		console.log('숫자1 - 숫자2 = ' + minus(a, b));
-		console.log('숫자1 * 숫자2 = ' + multiply(a, b));
-		console.log('숫자1 / 숫자2 = ' + divide(a, b));
-		
-		function check(a, b) {
-			return Number.isInteger(a) && Number.isInteger(b) && (a + b !== 0);
-		}
-		function plus(a, b) {
-			//  if (Number.isInteger(a) && Number.isInteger(b)) {
-			// 	return a + b;
-			//  }
-			// return -999;
-			return (check(a, b) ? a + b : '계산불가')
-		}
-		function minus(a, b) {
-			return (check(a, b) ? a - b : '계산불가')
-		}
-		function multiply(a, b) {
-			return (check(a, b) ? a * b : '계산불가')
-		}
-		function divide(a, b) {
-			return (check(a, b) ? a / b : '계산불가')
-		}
-		
+			var boxEl = document.querySelector('.box');
+			var descEl = document.createElement('p');
+			boxEl.appendChild(descEl);
+
+			descEl.innerHTML =
+				'숫자1 + 숫자2 = ' + plus(a, b) + '<br>' +
+				'숫자1 - 숫자2 = ' + minus(a, b) + '<br>' +
+				'숫자1 * 숫자2 = ' + multiply(a, b) + '<br>' +
+				'숫자1 / 숫자2 = ' + divide(a, b) + '<br>'
+				;
+			console.log('숫자1 + 숫자2 = ' + plus(a, b));
+			console.log('숫자1 - 숫자2 = ' + minus(a, b));
+			console.log('숫자1 * 숫자2 = ' + multiply(a, b));
+			console.log('숫자1 / 숫자2 = ' + divide(a, b));
+
+			function check(a, b) {
+				return Number.isInteger(a) && Number.isInteger(b) && (a + b !== 0);
+			}
+			function plus(a, b) {
+				//  if (Number.isInteger(a) && Number.isInteger(b)) {
+				// 	return a + b;
+				//  }
+				// return -999;
+				return (check(a, b) ? a + b : '계산불가')
+			}
+			function minus(a, b) {
+				return (check(a, b) ? a - b : '계산불가')
+			}
+			function multiply(a, b) {
+				return (check(a, b) ? a * b : '계산불가')
+			}
+			function divide(a, b) {
+				return (check(a, b) ? a / b : '계산불가')
+			}
+		};
+
 		/*
 		2. BMI를 계산하는 프로그램을 작성해 봅시다.
 		2-1. 체중kg / 키m*키m (공식 : http://www.marathon.pe.kr/diet/bmi_cal.html)

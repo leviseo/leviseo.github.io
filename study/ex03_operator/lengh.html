@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>length</title>
+</head>
+
+<body>
+	<h1>03. operator</h1>
+	<h2>4) 입력한 문자열의 길이 (공백포함)</h2>
+	<div class="box">
+		<strong>결과 출력창</strong>
+	</div>
+	<script>
+		window.onload = function () {
+			'use strict';
+			/*
+				4. 입력한 문자열의 길이를 알려주는 프로그램을 작성해 봅시다.
+				4-1. lenth , split
+			*/
+			var string = String(prompt('글자 입력'));
+			var boxEl = document.querySelector('.box');
+			var descEl = document.createElement('p');
+
+			boxEl.appendChild(descEl);
+
+			descEl.innerHTML = getLength(string);
+
+			function getLength(string) {
+				return string.split('').length;
+			}
+		};
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>fahrenheit</title>
+</head>
+
+<body>
+	<h1>03. operator</h1>
+	<h2>3) 화씨(°F) 변환</h2>
+	<div class="box">
+		<strong>결과 출력창</strong>
+	</div>
+	<script>
+		window.onload = function () {
+			'use strict';
+			var celsius = Number(prompt('섭씨 온도 입력 (°C)'));
+
+			var boxEl = document.querySelector('.box');
+			var descEl = document.createElement('p');
+			boxEl.appendChild(descEl);
+
+			descEl.innerHTML = getFahrenheit(celsius) + ' °F';
+
+			function getFahrenheit(celsius) {
+				var formula = (celsius * 1.8) + 32;
+				return parseFloat(formula.toFixed(2));
+			}
+		};
+	</script>
+</body>
+
+</html>

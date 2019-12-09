@@ -1,40 +1,52 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>even oddNumber</title>
 </head>
+
 <body>
+	<h1>04. 짝수 홀수 판별</h1>
+	<div class="box">
+		<strong>결과 출력창</strong>
+	</div>
 	<script>
+		window.onload = function () {
 		/*
-		입력받은 숫자가 홀수인지 짝수인지를 알려주는 프로그램을 작성해 봅시다.
-		1. 2로 나눠서 나머지가 0 이면 짝수, 0이 아니면 홀수
-		*/	
+			입력받은 숫자가 홀수인지 짝수인지를 알려주는 프로그램을 작성해 봅시다.
+			1. 2로 나눠서 나머지가 0 이면 짝수, 0이 아니면 홀수
+		*/
 		// -> 0은 0 이라고 하고싶다 : 0도 짝수래
 
-		'use strict';
-		let inputNumber = Number(prompt('정수를 입력해주세요'));
+			'use strict';
+			let inputNumber = Number(prompt('정수를 입력해주세요'));
 
-		document.write(isEven(inputNumber) ? '짝수' : '홀수');
+			var boxEl = document.querySelector('.box');
+			var descEl = document.createElement('p');
+			boxEl.appendChild(descEl);
 
-		function isEven(number) {
-			if (!Number.isInteger(number)) throw new Error('입력받은 값이 정수가 아닙니다.');
-			return number % 2 === 0;
-		}
+			descEl.innerHTML = isEven(inputNumber) ? '짝수' : '홀수';
+			// document.write(isEven(inputNumber) ? '짝수' : '홀수');
 
-		// function evenCheck(number) {
-		// 	if (number % 2 === 0) {
-		// 		console.log('짝수');
-		// 		document.write('짝수');
-		// 	} else {
-		// 		console.log('홀수');
-		// 		document.write('홀수');
-		// 	}
-		// }
+			function isEven(number) {
+				if (!Number.isInteger(number)) throw new Error('입력받은 값이 정수가 아닙니다.');
+				return number % 2 === 0;
+			}
 
-
+			// function evenCheck(number) {
+			// 	if (number % 2 === 0) {
+			// 		console.log('짝수');
+			// 		document.write('짝수');
+			// 	} else {
+			// 		console.log('홀수');
+			// 		document.write('홀수');
+			// 	}
+			// }
+		};
 	</script>
 </body>
+
 </html>

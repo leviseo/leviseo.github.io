@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>BMI</title>
+</head>
+
+<body>
+	<h1>03. operator</h1>
+	<h2>2) BMI 계산</h2>
+	<div class="box">
+		<strong>결과 출력창</strong>
+	</div>
+	<script>
+		window.onload = function () {
+			'use strict';
+			/*
+			2. BMI를 계산하는 프로그램을 작성해 봅시다.
+			2-1. 체중kg / 키m*키m (공식 : http://www.marathon.pe.kr/diet/bmi_cal.html)
+			2-2. 연산하는 함수를 만들어서 실행시키면 끝 아니야?
+			2-3. 소수점 한자리까지 -> toFixed -> 문자로 나옴... (Math.round 소수점 반올림)
+			2-4. parseFloat (친구 : parseInt)
+			: 얘도 함수로 만들어 놓자
+	
+			-> 키가 m 단위라 귀찮다.. cm로 바꿔놓자
+			-> 소수점 두자리 노출로 수정
+			*/
+			var h = Number(prompt('키 입력 (cm)'));
+			var w = Number(prompt('몸무게 입력 (kg)'));
+
+			var boxEl = document.querySelector('.box');
+			var descEl = document.createElement('p');
+
+			boxEl.appendChild(descEl);
+
+			descEl.innerText = Number(getBMI(w, h));
+
+			function getBMI(w, h) {
+				var formula = w / (h / 100 * h / 100);
+				return parseFloat(formula.toFixed(2));
+			}
+		};
+	</script>
+</body>
+
+</html>

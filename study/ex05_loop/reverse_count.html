@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>loop</title>
+</head>
+
+<body>
+	<h1>5. 반복문</h1>
+	<h2>3) 100, 99, 98, ..., 0 까지 출력</h2>
+	<div class="box">
+		<strong>consloe</strong>
+	</div>
+	<ol>
+		<li>사용자가 입력한 수들의 갯수와 합을 구하는 프로그램을 작성해 봅시다. (단 0을 입력받으면 입력 종료)</li>
+		<li>1에서 100까지 짝수의 합을 구해 봅시다.</li>
+		<li>100, 99, 98, ..., 0 까지 출력하는 프로그램을 작성해 봅시다.</li>
+		<li>구구단 반복문 적용아직 안하신분: 2단을 반복문으로 출력하기 (console.log()혹은 document.write());</li>
+	</ol>
+	<script>
+		window.onload = function () {
+			//  3번
+			doReverseCount(100, 0);
+
+			function doReverseCount(start, end) {
+				for (let i = start; i >= end; i--) {
+					console.log(i);
+				}
+			}
+		};
+	</script>
+</body>
+
+</html>

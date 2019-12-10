@@ -1,76 +1,92 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>loop</title>
 </head>
+
 <body>
+	<h1>5. 반복문</h1>
+	<h2>1) 입력한 수들의 갯수와 합</h2>
+	<div class="box">
+		<strong>결과 출력창</strong>
+	</div>
 	<ol>
 		<li>사용자가 입력한 수들의 갯수와 합을 구하는 프로그램을 작성해 봅시다. (단 0을 입력받으면 입력 종료)</li>
 		<li>1에서 100까지 짝수의 합을 구해 봅시다.</li>
 		<li>100, 99, 98, ..., 0 까지 출력하는 프로그램을 작성해 봅시다.</li>
 		<li>구구단 반복문 적용아직 안하신분: 2단을 반복문으로 출력하기 (console.log()혹은 document.write());</li>
 	</ol>
-<script>
- 'use strict';
- /* 
- 	1 ~ 10 까지 합
-	 1
-	 1 + 2
-	 1 + 2 + 3
-	 1 + 2 + 3 ... + 10
- */
+	<script>
+		window.onload = function () {
+			'use strict';
+			/* 
+				 1 ~ 10 까지 합
+				1
+				1 + 2
+				1 + 2 + 3
+				1 + 2 + 3 ... + 10
+			*/
 
- // 1번
+			// 1번
 
-//  doTotalInsertedNum();
+			doTotalInsertedNum();
 
- function doTotalInsertedNum() {
+			function doTotalInsertedNum() {
 
-	let total = 0;
-	let count = 0;
-	let insertedNum = Number(prompt());
+				let total = 0;
+				let count = 0;
+				let insertedNum = Number(prompt('숫자를 입력해주세요. 0 입력 시 종료'));
 
-	while (insertedNum !== 0) { //!!insertedNum
-		total += insertedNum;
-		count += 1;
-		console.log('수량 : ',count);
-		console.log('합계 : ',total);
-		insertedNum = Number(prompt());
-	}
- }
+				var boxEl = document.querySelector('.box');
+				var descEl = document.createElement('p');
+				boxEl.appendChild(descEl);
 
-
-//  2번
- let startNum = Number(prompt());
- let endNum = Number(prompt());
- let evenSum = getEvenSum(startNum, endNum);
-
- console.log(evenSum);
-
- function getEvenSum(start, end) {
-	 let total = 0;
-	 for (let i = start; i <= end; i++) {
-		 if (i % 2 === 0) {
-			total += i;
-		 }
-	 }
-	 return total;
- }
-
-//  3번
-// doReverseCount(100, 0);
-
-function doReverseCount(start, end) {
-	for(let i = start; i >= end; i--)	{
-		console.log(i);
-	}
-}
+				while (insertedNum !== 0) { //!!insertedNum
+					total += insertedNum;
+					count += 1;
+					descEl.innerHTML = '수량 : '+ count + '<br> 합계 : '+ total;
+					// console.log('수량 : ', count);
+					// console.log('합계 : ', total);
+					insertedNum = Number(prompt('숫자를 입력해주세요. 0 입력 시 종료'));
+				}
+			}
+		};
 
 
 
-</script>
+		// //  2번
+		// let startNum = Number(prompt());
+		// let endNum = Number(prompt());
+		// let evenSum = getEvenSum(startNum, endNum);
+
+		// console.log(evenSum);
+
+		// function getEvenSum(start, end) {
+		// 	let total = 0;
+		// 	for (let i = start; i <= end; i++) {
+		// 		if (i % 2 === 0) {
+		// 			total += i;
+		// 		}
+		// 	}
+		// 	return total;
+		// }
+
+		// //  3번
+		// // doReverseCount(100, 0);
+
+		// function doReverseCount(start, end) {
+		// 	for (let i = start; i >= end; i--) {
+		// 		console.log(i);
+		// 	}
+		// }
+
+
+
+	</script>
 </body>
+
 </html>

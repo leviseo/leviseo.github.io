@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>function</title>
+</head>
+
+<body>
+	<h1>08. function</h1>
+	<div id="box">
+		<h2>결과출력창</h2>
+	</div>
+	<script>
+		main();
+
+		function calculate(num) {
+			let result = [];
+			for (let i = 1; i <= 9; i++) {
+				result[i] = num * i;
+			}
+			console.log(result);
+			return result;
+		}
+
+		function print(num, result) {
+			let boxEl = document.querySelector('#box');
+			let titEl = document.createElement('h3');
+			boxEl.appendChild(titEl);
+			titEl.innerHTML = num + '단';
+
+			for (let i = 1; i <= 9; i++) {
+				let descEl = document.createElement('p');
+				boxEl.appendChild(descEl);
+				descEl.innerHTML = num + ' X ' + i + ' = ' + result[i] + '<br>';
+			}
+		}
+
+		function main() {
+			for (let i = 2; i <= 9; i++) {
+				calculate(i);
+				print(i, calculate(i));
+			}
+		}
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>object</title>
+</head>
+
+<body>
+	<h1>09. object</h1>
+	<ul>
+		<li>함수를 구구단 객체의 메소드로 변경한다.</li>
+	</ul>
+	<!-- 
+		1. gugudan 이라는 객체를 생성한다.
+		2. gugudan 객체에 앞 단계에서 작성한 함수를 메소드로 추가한다.
+		3. 이전 과제 프로그램을 시작하는 main() 함수를 사용했지만, 이번에는 즉시실행함수로 만들어본다. 
+	 -->
+	<div id="box">
+		<strong>결과출력창</strong>
+	</div>
+	<script>
+		(function () {
+			let gugudan = {};
+
+			gugudan.calculate = function(num) {
+				let result = [];
+
+				for (let i = 1; i <= 9; i++) {
+					result[i] = num * i;
+				}
+				return result;
+			}
+
+			gugudan.print = function(num, result) {
+				let boxEl = document.querySelector('#box');
+				let titEl = document.createElement('h3');
+				boxEl.appendChild(titEl);
+				titEl.innerHTML = num + '단';
+
+				for (let i = 1; i <= 9; i++) {
+					let descEl = document.createElement('p');
+					boxEl.appendChild(descEl);
+					descEl.innerHTML = num + ' X ' + i + ' = ' + result[i] + '<br>';
+				}
+			}
+
+			for (let i = 2; i <= 9; i++) {
+				gugudan.calculate(i);
+				gugudan.print(i, gugudan.calculate(i));
+			}
+
+		})();
+
+	</script>
+</body>
+
+</html>

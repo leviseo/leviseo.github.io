@@ -38,3 +38,9 @@
 7. loop2
    - [page](https://leviseo.github.io/study/ex07_loop2/){:target="\_blank"}
    - [github](https://github.com/leviseo/leviseo.github.io/blob/master/study/ex07_loop2/index.html){:target="\_blank"}
+8. function
+   - [page](https://leviseo.github.io/study/ex08_function/){:target="\_blank"}
+   - [github](https://github.com/leviseo/leviseo.github.io/blob/master/study/ex08_function/index.html){:target="\_blank"}
+9. object
+   - [page](https://leviseo.github.io/study/ex09_object/){:target="\_blank"}
+   - [github](https://github.com/leviseo/leviseo.github.io/blob/master/study/ex09_object/index.html){:target="\_blank"}

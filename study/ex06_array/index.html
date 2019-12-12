@@ -16,48 +16,19 @@
 	</ol>
 </body>
 <script>
-//2중 반복문 2단 ~ 9단까지 배열 가용하는 걸로
-/*
-1. for문으로 구구단을 만들자
-2. 배열에 담자
-3. for문을 하나 더 쓰자
- ㄴ 이건 함수에 어떻게 담지
-*/
 'use strict';
-// 1번
 
-// let result = [];
+let result = [];
 
-// array99(2);
+array99(2);
 
-// function array99(number) {
-// 	for (let i = 1; i < 10; i++) {
-// 		let gugu = number * i;
-// 		result.push(gugu);
-// 	}
-// 	console.log(result);
-// 	document.write(result);
-// }
-
-
-let result2 = [];
-
-gugu();
-write();
-
-function gugu() {
-	for (let n = 2; n < 10; n++) {
-		for (let i = 1; i < 10; i++) {
-			let gugu = n * i;
-			result2.push(gugu);
-		}
+function array99(number) {
+	for (let i = 1; i < 10; i++) {
+		let gugu = number * i;
+		result.push(gugu);
 	}
-	return result2;
-}
-
-function write() {
-	console.log(result2);
-	document.write(result2);
+	console.log(result);
+	document.write(result);
 }
 
 </script>

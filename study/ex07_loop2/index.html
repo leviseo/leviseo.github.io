@@ -4,74 +4,34 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>loop</title>
+	<title>loop2</title>
 </head>
 <body>
-	<h1>07. 반복문 2</h1>
-	<ol>
-		<li>사용자가 입력한 수들의 갯수와 합을 구하는 프로그램을 작성해 봅시다. (단 0을 입력받으면 입력 종료)</li>
-		<li>1에서 100까지 짝수의 합을 구해 봅시다.</li>
-		<li>100, 99, 98, ..., 0 까지 출력하는 프로그램을 작성해 봅시다.</li>
-		<li>구구단 반복문 적용아직 안하신분: 2단을 반복문으로 출력하기 (console.log()혹은 document.write());</li>
-	</ol>
+	<h1>07. 반복문2</h1>
+	<p>'06. 배열'에 이어서, 2중 반복문 사용으로 2~9단 결과를 배열에 담아, 화면에 출력합니다.</p>
+	
 <script>
  'use strict';
- /* 
- 	1 ~ 10 까지 합
-	 1
-	 1 + 2
-	 1 + 2 + 3
-	 1 + 2 + 3 ... + 10
- */
 
- // 1번
+let result2 = [];
 
-//  doTotalInsertedNum();
+gugu();
+write();
 
- function doTotalInsertedNum() {
-
-	let total = 0;
-	let count = 0;
-	let insertedNum = Number(prompt());
-
-	while (insertedNum !== 0) { //!!insertedNum
-		total += insertedNum;
-		count += 1;
-		console.log('수량 : ',count);
-		console.log('합계 : ',total);
-		insertedNum = Number(prompt());
+function gugu() {
+	for (let n = 2; n < 10; n++) {
+		for (let i = 1; i < 10; i++) {
+			let gugu = n * i;
+			result2.push(gugu);
+		}
 	}
- }
-
-
-//  2번
- let startNum = Number(prompt());
- let endNum = Number(prompt());
- let evenSum = getEvenSum(startNum, endNum);
-
- console.log(evenSum);
-
- function getEvenSum(start, end) {
-	 let total = 0;
-	 for (let i = start; i <= end; i++) {
-		 if (i % 2 === 0) {
-			total += i;
-		 }
-	 }
-	 return total;
- }
-
-//  3번
-// doReverseCount(100, 0);
-
-function doReverseCount(start, end) {
-	for(let i = start; i >= end; i--)	{
-		console.log(i);
-	}
+	return result2;
 }
 
-
-
+function write() {
+	console.log(result2);
+	document.write(result2);
+}
 </script>
 </body>
 </html>

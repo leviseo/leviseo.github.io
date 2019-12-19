@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+@import '_reset.scss';
+
+.container {
+	max-width: 80%;
+	margin: 0 auto;
+}
+
+.group_tabs {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+
+	.btn_tab {
+		display: table-cell;
+		width: 33.33%;
+		height: 50px;
+		border: 1px solid #eaeaea;
+		vertical-align: middle;
+		text-align: center;
+		font-size: 16px;
+		color: #aaa;
+		&.on {
+			background-color: darkslategray;
+			font-weight: 500;
+			color: #fff;
+		}
+	}	
+}
+
+.tab_content {
+	display: none;
+	min-height: 400px;
+	padding: 20px;
+	border: 1px solid #dedede;
+	background-color: papayawhip;
+	box-sizing: border-box;
+	&.visible {
+		display: block;
+	}
+	.img_g {
+		display: block;
+		width: 100%;
+	}
+}
+
+.pagenation {
+	padding-top: 10px;
+	text-align: center;
+	%btn {
+		width: 36px;
+		height: 36px;
+		border: 1px solid darkslategray;
+		font-weight: 700;
+		font-size: 24px;
+		color: darkslategray;
+	}
+	.btn_prev {
+		@extend %btn;
+	}
+	.btn_next {
+		@extend %btn;
+	}
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>title</title>
+</head>
+<body>
+	<h1>구구단 리펙토링</h1>
+	<script>
+		/*
+			1. 2단 구현하기
+			console.log('2 * ' i ' = ' 2 * i);
+		*/
+
+		for (let i = 1; i <= 9 ; i++) {
+			// console.log('2 * ' + i + ' = ' + 2 * i);
+		}
+
+		/*
+			2. 2중 반복문으로 9단 까지 해보기 
+		*/
+
+
+		for (let a = 2; a <= 9; a++) {
+			for (let b = 1; b <= 9; b++) {
+				// console.log( a + ' * ' +  b  + ' = ' + a * b);
+			}
+		}
+		
+		/*
+			3. 각 단의 결과를 results 라는 배열에 담아서 출력한다
+			단계1. 2단 결과 results = [ 2,4,6,...,18 ] 담고
+			단계2. 2단 결과를 출력 console.log(result[0]) ... console.log(result[8]) 
+		*/
+
+		let results = [];
+
+		for (let c = 1; c <= 9; c++) {
+			console.log( 2 *  c );
+
+
+		}
+
+
+
+
+
+
+	</script>
+</body>
+</html>

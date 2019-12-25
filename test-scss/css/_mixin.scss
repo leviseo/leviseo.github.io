@@ -1,0 +1,20 @@
+@mixin verticalCenter($targetClassName) {
+	font-size: 0;
+	white-space: nowrap;
+
+	&:after {
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+		content: '';
+	}
+	
+	.#{$targetClassName} {
+		display: inline-block;
+		font-size: initial;
+		vertical-align: middle;
+		white-space: normal;
+		@content;
+	}
+
+}

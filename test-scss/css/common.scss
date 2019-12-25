@@ -3,3 +3,12 @@
 @import 'mixin.scss';
 @import 'reset.scss';
 
+.parent {
+	width: 100px;
+	height: 100px;
+	background-color: skyblue;
+
+	@include verticalCenter(child) {
+		font-size: 20px;
+	}
+}

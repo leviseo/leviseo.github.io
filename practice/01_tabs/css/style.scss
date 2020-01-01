@@ -32,6 +32,7 @@
 .tab_content {
 	display: none;
 	min-height: 400px;
+	max-height: 400px;
 	padding: 20px;
 	border: 1px solid #dedede;
 	background-color: papayawhip;
@@ -41,7 +42,8 @@
 	}
 	.img_g {
 		display: block;
-		width: 100%;
+		height: 100%;
+		margin: 0 auto;
 	}
 }
 

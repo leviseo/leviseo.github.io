@@ -44,11 +44,11 @@ address, caption, cite, code, dfn, em, var { font-style: normal; font-weight: no
 
 .group_tabs .btn_tab.on { background-color: darkslategray; font-weight: 500; color: #fff; }
 
-.tab_content { display: none; min-height: 400px; padding: 20px; border: 1px solid #dedede; background-color: papayawhip; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.tab_content { display: none; min-height: 400px; max-height: 400px; padding: 20px; border: 1px solid #dedede; background-color: papayawhip; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .tab_content.visible { display: block; }
 
-.tab_content .img_g { display: block; width: 100%; }
+.tab_content .img_g { display: block; height: 100%; margin: 0 auto; }
 
 .pagenation { padding-top: 10px; text-align: center; }
 

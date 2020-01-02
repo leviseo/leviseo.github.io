@@ -14,20 +14,20 @@
 			console.log('2 * ' i ' = ' 2 * i);
 		*/
 
-		for (let i = 1; i <= 9 ; i++) {
-			// console.log('2 * ' + i + ' = ' + 2 * i);
-		}
+		// for (let i = 1; i <= 9 ; i++) {
+		// 	// console.log('2 * ' + i + ' = ' + 2 * i);
+		// }
 
 		/*
 			2. 2중 반복문으로 9단 까지 해보기 
 		*/
 
 
-		for (let a = 2; a <= 9; a++) {
-			for (let b = 1; b <= 9; b++) {
-				// console.log( a + ' * ' +  b  + ' = ' + a * b);
-			}
-		}
+		// for (let a = 2; a <= 9; a++) {
+		// 	for (let b = 1; b <= 9; b++) {
+		// 		// console.log( a + ' * ' +  b  + ' = ' + a * b);
+		// 	}
+		// }
 		
 		/*
 			3. 각 단의 결과를 results 라는 배열에 담아서 출력한다
@@ -37,15 +37,19 @@
 
 		let results = [];
 
-		for (let c = 1; c <= 9; c++) {
-			console.log( 2 *  c );
-
-
+		for (let n = 2; n <= 9; n++) {
+			for (let i = 0; i < 9; i++) {
+				results[i] = n * (i + 1);
+			}
+			console.log(results);
+			for (let i = 0; i < 9; i++) {
+				document.write(`${n} * ${( i + 1 )} = ${results[i]} <br>`);
+			}
 		}
 
-
-
-
+		/*
+			4. 함수로 만들자
+		*/
 
 
 	</script>

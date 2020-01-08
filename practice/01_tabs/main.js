@@ -28,6 +28,7 @@
 
 		var tabIndext = 0;
 		var tabContentsIndex = 0;
+		var MOVE_STEP = 1;
 
 
     function addClass(el, className) {
@@ -62,8 +63,46 @@
       });
 		}
 
+		function isAbleToMoveNext(tabIndex) {
+			if (tabIndext < tabs.length -1) {
+				tabIndext += 1;
+				tabContentsIndex += 1;
+			} else {
+				tabIndext = 0;
+				tabContentsIndex = 0;
+			}
+		}
+
+		function isAbleToMovePrev(tabIndex) {
+			if (tabIndext <= 0) {
+				tabIndext = tabs.length -1;
+				tabContentsIndex = tabs.length -1;
+			} else {
+				tabIndext -= 1;
+				tabContentsIndex -= 1;
+			}
+		}
+
+		function onNextBtnClick() {
+			removeClassAll(tabs, "on");
+			removeClassAll(tabContents, "visible");
+			isAbleToMoveNext(this.tabIndex);
+			addClass(tabs[tabIndext], "on");
+			addClass(tabContents[tabContentsIndex], 'visible');
+		}
+
+		function onPrevBtnClick() {
+			removeClassAll(tabs, "on");
+			removeClassAll(tabContents, "visible");
+			isAbleToMovePrev(this.tabIndex);
+			addClass(tabs[tabIndext], "on");
+			addClass(tabContents[tabContentsIndex], 'visible');
+		}
+
+		btnNextEl.addEventListener("click", onNextBtnClick);
+		btnPrevEl.addEventListener("click", onPrevBtnClick);
 	
-    btnNextEl.addEventListener("click", function() {
+    // btnNextEl.addEventListener("click", function() {
 
 			// 1. removeAll(elems, 'on')
 			// 2. isAbleToMoveNext(tabIndex) => true / false
@@ -75,37 +114,30 @@
 
 			// removeClassAll(tabs, "on");
 			// removeClassAll(tabContents, "visible");
-			// function isAbleToMoveNext () {
+			// if (tabIndext >= tabs.length -1) {
+			// 	tabIndext = 0;
+			// 	tabContentsIndex = 0;
+			// } else {
+			// 	tabIndext += 1;
+			// 	tabContentsIndex += 1;
 			// }
+			// addClass(tabs[tabIndext], "on");
+			// addClass(tabContents[tabContentsIndex], 'visible');
+		// });
 
-
-			removeClassAll(tabs, "on");
-			removeClassAll(tabContents, "visible");
-			if (tabIndext >= tabs.length -1) {
-				tabIndext = 0;
-				tabContentsIndex = 0;
-			} else {
-				tabIndext += 1;
-				tabContentsIndex += 1;
-			}
-			addClass(tabs[tabIndext], "on");
-			addClass(tabContents[tabContentsIndex], 'visible');
-		});
-
-		btnPrevEl.addEventListener("click", function() {
-			removeClassAll(tabs, "on");
-			removeClassAll(tabContents, "visible");
-			if (tabIndext <= 0) {
-				tabIndext = tabs.length -1;
-				tabContentsIndex = tabs.length -1;
-			} else {
-				tabIndext -= 1;
-				tabContentsIndex -= 1;
-			}
-			addClass(tabs[tabIndext], "on");
-			addClass(tabContents[tabContentsIndex], 'visible');
-		});
-		
+		// btnPrevEl.addEventListener("click", function() {
+		// 	removeClassAll(tabs, "on");
+		// 	removeClassAll(tabContents, "visible");
+			// if (tabIndext <= 0) {
+			// 	tabIndext = tabs.length -1;
+			// 	tabContentsIndex = tabs.length -1;
+			// } else {
+			// 	tabIndext -= 1;
+			// 	tabContentsIndex -= 1;
+			// }
+			// addClass(tabs[tabIndext], "on");
+			// addClass(tabContents[tabContentsIndex], 'visible');
+		// });
 		
   };
 })();

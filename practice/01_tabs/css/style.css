@@ -53,3 +53,5 @@ address, caption, cite, code, dfn, em, var { font-style: normal; font-weight: no
 .pagenation { padding-top: 10px; text-align: center; }
 
 .pagenation .btn_prev, .pagenation .btn_next { width: 36px; height: 36px; border: 1px solid darkslategray; font-weight: 700; font-size: 24px; color: darkslategray; }
+
+.pagenation .btn_prev:disabled, .pagenation .btn_next:disabled, .pagenation .disabled.btn_prev, .pagenation .disabled.btn_next { background-color: #eaeaea; opacity: 0.4; cursor: no-drop; }

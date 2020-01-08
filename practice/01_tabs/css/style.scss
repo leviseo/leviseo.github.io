@@ -57,6 +57,12 @@
 		font-weight: 700;
 		font-size: 24px;
 		color: darkslategray;
+		&:disabled,
+		&.disabled {
+			background-color: #eaeaea;
+			opacity: 0.4;
+			cursor: no-drop;
+		}
 	}
 	.btn_prev {
 		@extend %btn;

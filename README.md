@@ -1,4 +1,4 @@
-## study
+## Study
 
 1. inputNumber
    - [page](https://leviseo.github.io/study/ex01_inputNumber/){:target="\_blank"}
@@ -44,6 +44,9 @@
 9. object
    - [page](https://leviseo.github.io/study/ex09_object/){:target="\_blank"}
    - [github](https://github.com/leviseo/leviseo.github.io/blob/master/study/ex09_object/index.html){:target="\_blank"}
+
+## Freeform Project
+
 * check case
    - [page](https://leviseo.github.io/study/checkCase/){:target="\_blank"}
    - [github](https://github.com/leviseo/leviseo.github.io/blob/master/study/checkCase/index.html){:target="\_blank"}

@@ -52,5 +52,6 @@
 
 ## Autodidacticism
 
-- [page](https://leviseo.github.io/practice/01_tabs/){:target="\_blank"}
-- [github](https://github.com/leviseo/leviseo.github.io/tree/master/practice/01_tabs){: target="\_blank" }
+* TAB UI
+  - [page](https://leviseo.github.io/practice/01_tabs/){:target="\_blank"}
+  - [github](https://github.com/leviseo/leviseo.github.io/tree/master/practice/01_tabs){: target="\_blank" }

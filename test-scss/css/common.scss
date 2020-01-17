@@ -3,12 +3,168 @@
 @import 'mixin.scss';
 @import 'reset.scss';
 
-.parent {
-	width: 100px;
-	height: 100px;
-	background-color: skyblue;
+.attend_list_item {
+	display: block;
+	height: 100%;
 
-	@include verticalCenter(child) {
-		font-size: 20px;
+	&:after {
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+		content: '';
 	}
+
+	.inner_item {
+    display: inline-block;
+		width: 100%;
+		height: 40px;
+		line-height: 40px;
+    vertical-align: middle;
+	}
+
+	.box_profile {
+		@include size(36px);
+		display: inline-block;
+		margin-right: 12px;
+		vertical-align: middle;
+	}
+
+	.box_user_info {
+		float: left;
+		font-size: 0;
+	}
+
+	.group_user_info {
+		display: inline-block;
+		vertical-align: middle;
+		line-height: 1;
+
+	}
+
+	.box_user {
+		display: inline-block;
+		vertical-align: middle;
+		@include ellipsis;
+		max-width: 105px;
+		line-height: initial;
+	}
+
+	.label_tag {
+		float: right;
+		margin-top: 0;
+		border-radius: 8px;
+		line-height: 15px;
+	}
+
+	.txt_name {
+		font-size: 12px;
+		line-height: 18px;
+		font-weight: bold;
+	}
+
+	.box_date {
+		line-height: initial;
+	}
+
+	.txt_date {
+		display: inline-block;
+		font-size: 12px;
+		color: #8c8c8c;
+		vertical-align: top;
+		& + .txt_date {
+			margin-left: 6px;
+		}
+	}
+
+  .area_contents {
+    overflow: hidden;
+    position: relative;
+    min-height: 100%;
+    text-align: center;
+  }
+
+  .wrap_align {
+    position: absolute;
+    top: 0;
+    right: 46px;
+    bottom: 0;
+    left: 0;
+		height: 100%; 
+		font-size: 0;
+		&:after {
+			display: inline-block;
+			height: 100%;
+			vertical-align: middle;
+			content: '';
+		}
+	}
+
+  .txt_ellipsis {
+    @include ellipsis;
+    display: inline-block;
+    width: 100%;
+    font-size: 12px;
+		vertical-align: middle;
+  }
+  
+  .txt_default {
+    font-size: 13px;
+  }
+
+  .thumb_gallery {
+    display: inline-block;
+    position: relative;
+    @include size(36px);
+    border-radius: 5px;
+    background-size: cover;
+    background-position: 50% 50%;
+    vertical-align: middle;
+    &:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border: 1px solid #d9d9d9;
+    }
+	}
+	
+	.txt_point {
+		font-size: 12px;
+		color: #ff6178;
+		font-weight: bold;
+		& + .txt_attend {
+			margin-left: 10px;
+		}
+	}
+
+	.txt_attend {
+		font-size: 12px;
+		color: #737373;
+		text-align: right;
+	}
+
+  .attend_mark {
+    position: absolute;
+    top: 0;
+    right: 0;
+		bottom: 0;
+		font-size: 0;
+    &:after {
+			display: inline-block;
+			height: 100%;
+			vertical-align: middle;
+			content: '';
+    }
+    .ico_svg {
+			@include size(36px);
+			display: inline-block;
+			border-radius: 50%;
+			background: url(http://via.placeholder.com/220/ffdd00/fff) 0 0 no-repeat;
+			background-size: contain;
+      vertical-align: middle;
+    }
+  }
+	
+
 }

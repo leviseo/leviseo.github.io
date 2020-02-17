@@ -1,7 +1,7 @@
 @charset 'UTF-8';
 
-@import 'mixin.scss';
-@import 'reset.scss';
+@import '../_shared/mixin.scss';
+@import '../_shared/reset.scss';
 
 .attend_list_item {
 	display: block;

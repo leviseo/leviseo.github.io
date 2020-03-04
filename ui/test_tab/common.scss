@@ -1,0 +1,70 @@
+@charset "UTF-8";
+@import '../_shared/mixin.scss';
+@import '../_shared/reset.scss';
+
+html, body {
+	height: 100%;
+}
+.container {
+	padding: 20px;
+	background-color: #f2f2f2;
+}
+
+$tabCount : 4;
+
+$border: 1px solid #ededed;
+
+$tabUnderLine_height: 4;
+$tabUnderLine_color : #ffdd00;
+
+.group_tab {
+	background-color: #fff;
+
+	.list_tab {
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+		height: 100%;
+		li {
+			display: table-cell;
+			width: 100% / $tabCount;
+			height: 100%;
+			text-align: center;
+			vertical-align: middle;
+
+			& ~ li {
+				border-left: $border;
+			}
+
+			&:first-child {
+				.btn_tab {
+					padding-left: 20px;
+				}
+			}
+			&:last-child {
+				.btn_tab {
+					padding-right: 20px;
+				}
+			}
+		}
+
+		.btn_tab {
+			display: table-cell;
+			position: relative;
+			width: 100%;
+			height: 100%;
+			&.on {
+				.txt_tab {
+					border-bottom: #{$tabUnderLine_height}px solid $tabUnderLine_color;
+				}
+			}
+		}
+
+		.txt_tab {
+			display: inline-block;
+			vertical-align: middle;
+			padding-top: #{$tabUnderLine_height}px;
+			border-bottom: #{$tabUnderLine_height}px solid transparent;
+		}
+	}
+}

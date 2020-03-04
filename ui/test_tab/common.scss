@@ -10,8 +10,6 @@ html, body {
 	background-color: #f2f2f2;
 }
 
-$tabCount : 4;
-
 $border: 1px solid #ededed;
 
 $tabUnderLine_height: 4;
@@ -27,7 +25,6 @@ $tabUnderLine_color : #ffdd00;
 		height: 100%;
 		li {
 			display: table-cell;
-			width: 100% / $tabCount;
 			height: 100%;
 			text-align: center;
 			vertical-align: middle;
@@ -49,22 +46,34 @@ $tabUnderLine_color : #ffdd00;
 		}
 
 		.btn_tab {
-			display: table-cell;
+			display: block;
 			position: relative;
 			width: 100%;
 			height: 100%;
+			box-sizing: border-box;
 			&.on {
-				.txt_tab {
-					border-bottom: #{$tabUnderLine_height}px solid $tabUnderLine_color;
+				.inner_btn {
+					&:before {
+						position: absolute;
+						bottom: 0;
+						right: 0;
+						left: 0;
+						height: #{$tabUnderLine_height}px;
+						background-color: $tabUnderLine_color;
+						vertical-align: middle;
+						content:'';
+					}
 				}
 			}
 		}
 
-		.txt_tab {
+		.inner_btn {
 			display: inline-block;
+			position: relative;
+			height: 100%;
 			vertical-align: middle;
-			padding-top: #{$tabUnderLine_height}px;
-			border-bottom: #{$tabUnderLine_height}px solid transparent;
+			@include verticalCenter(txt_tab);
+			
 		}
 	}
 }

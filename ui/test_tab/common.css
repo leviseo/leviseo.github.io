@@ -65,7 +65,7 @@ html, body { height: 100%; }
 
 .group_tab .list_tab { display: table; table-layout: fixed; width: 100%; height: 100%; }
 
-.group_tab .list_tab li { display: table-cell; width: 25%; height: 100%; text-align: center; vertical-align: middle; }
+.group_tab .list_tab li { display: table-cell; height: 100%; text-align: center; vertical-align: middle; }
 
 .group_tab .list_tab li ~ li { border-left: 1px solid #ededed; }
 
@@ -73,8 +73,12 @@ html, body { height: 100%; }
 
 .group_tab .list_tab li:last-child .btn_tab { padding-right: 20px; }
 
-.group_tab .list_tab .btn_tab { display: table-cell; position: relative; width: 100%; height: 100%; }
+.group_tab .list_tab .btn_tab { display: block; position: relative; width: 100%; height: 100%; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-.group_tab .list_tab .btn_tab.on .txt_tab { border-bottom: 4px solid #ffdd00; }
+.group_tab .list_tab .btn_tab.on .inner_btn:before { position: absolute; bottom: 0; right: 0; left: 0; height: 4px; background-color: #ffdd00; vertical-align: middle; content: ''; }
 
-.group_tab .list_tab .txt_tab { display: inline-block; vertical-align: middle; padding-top: 4px; border-bottom: 4px solid transparent; }
+.group_tab .list_tab .inner_btn { display: inline-block; position: relative; height: 100%; vertical-align: middle; font-size: 0; white-space: nowrap; }
+
+.group_tab .list_tab .inner_btn:after { display: inline-block; height: 100%; vertical-align: middle; content: ''; }
+
+.group_tab .list_tab .inner_btn .txt_tab { display: inline-block; font-size: initial; vertical-align: middle; white-space: normal; }

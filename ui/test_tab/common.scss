@@ -1,79 +1,177 @@
 @charset "UTF-8";
-@import '../_shared/mixin.scss';
-@import '../_shared/reset.scss';
+@import "../_shared/mixin.scss";
+@import "../_shared/reset.scss";
 
-html, body {
-	height: 100%;
+html,
+body {
+  height: 100%;
 }
 .container {
-	padding: 20px;
-	background-color: #f2f2f2;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  h2 {
+    margin-bottom: 16px;
+    &:not(:first-child) {
+      margin-top: 40px;
+    }
+  }
 }
 
-$border: 1px solid #ededed;
+$height: 4;
+$primary: #ffdd00;
+$secondary: #a9a9a9;
+$border: 1px solid $secondary;
 
-$tabUnderLine_height: 4;
-$tabUnderLine_color : #ffdd00;
+@mixin list_static() {
+  .list_tab {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    height: 100%;
+    li {
+      display: table-cell;
+      height: 100%;
+      text-align: center;
+      vertical-align: middle;
 
-.group_tab {
-	background-color: #fff;
+      & ~ li {
+        border-left: $border;
+      }
 
-	.list_tab {
-		display: table;
-		table-layout: fixed;
-		width: 100%;
-		height: 100%;
-		li {
-			display: table-cell;
-			height: 100%;
-			text-align: center;
-			vertical-align: middle;
+      &:first-child {
+        .btn_tab {
+          padding-left: 20px;
+        }
+      }
+      &:last-child {
+        .btn_tab {
+          padding-right: 20px;
+        }
+      }
+    }
+    @content;
+  }
+}
 
-			& ~ li {
-				border-left: $border;
-			}
+@mixin list_responsive() {
+  .list_tab {
+    font-size: 0;
+    li {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    @content;
+  }
+}
 
-			&:first-child {
-				.btn_tab {
-					padding-left: 20px;
-				}
-			}
-			&:last-child {
-				.btn_tab {
-					padding-right: 20px;
-				}
-			}
-		}
-
-		.btn_tab {
-			display: block;
-			position: relative;
-			width: 100%;
-			height: 100%;
-			box-sizing: border-box;
-			&.on {
-				.inner_btn {
-					&:before {
-						position: absolute;
-						bottom: 0;
-						right: 0;
-						left: 0;
-						height: #{$tabUnderLine_height}px;
-						background-color: $tabUnderLine_color;
-						vertical-align: middle;
-						content:'';
-					}
-				}
-			}
-		}
-
-		.inner_btn {
-			display: inline-block;
-			position: relative;
-			height: 100%;
-			vertical-align: middle;
-			@include verticalCenter(txt_tab);
-			
+@mixin list_underline($color) {
+  .list_tab {
+		position: relative;
+		&:after {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			height: 1px;
+			background-color: $color;
+			content:'';
+			// border-bottom: $border;
+			// border-radius: $border-radius;
 		}
 	}
+  // .btn_tab {
+  //   margin-bottom: -1px;
+  // }
+}
+
+@mixin active_underline($height, $primary) {
+	.on {
+		.inner_btn {
+			&:before {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				height: #{$height}px;
+				background-color: $primary;
+				vertical-align: middle;
+				content: "";
+			}
+		}
+  }
+}
+
+@mixin active_bg() {
+	.on {
+		background-color: $primary;
+		@content;
+	}
+}
+
+.btn_tab {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.inner_btn {
+  display: inline-block;
+  position: relative;
+  height: 100%;
+  vertical-align: middle;
+  &:after {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    content: "";
+  }
+  .txt_tab {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+}
+
+.group_tab {
+  background-color: #fff;
+	@include list_static();
+	@include active_underline(4, #ffdd00);
+}
+
+.group_tab_type2 {
+  @include list_responsive();
+  @include list_underline($secondary);
+  li ~ li {
+    margin-left: 2px;
+	}
+  .btn_tab {
+		z-index: 10; //border-bottom active of/off
+    padding: 0 10px;
+    border: 1px solid $secondary;
+    border-radius: 5px 5px 0 0;
+    background-color: #fff;
+	}
+	@include active_bg() {
+		border-color: $primary;
+	}
+}
+
+.group_tab_type3 {
+	@include list_static() {
+		table-layout: auto;
+		overflow: hidden;
+		
+		border-radius: 20px;
+		background-color: #fff;
+		li ~ li {
+			border-left: $border;
+		}
+	}
+	@include active_bg() {
+		border-right: 1px solid $primary;
+	};
 }

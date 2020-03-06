@@ -70,16 +70,19 @@ $border: 1px solid $secondary;
 	}
 }
 
-@mixin active_underline($height, $primary) {
+@mixin active_underline($height, $color, $fullWidth : null) {
 	.on {
 		.inner_btn {
+			@if $fullWidth != fullWidth {
+				position: relative;
+			}
 			&:before {
 				position: absolute;
 				bottom: 0;
 				right: 0;
 				left: 0;
 				height: #{$height}px;
-				background-color: $primary;
+				background-color: $color;
 				vertical-align: middle;
 				content: "";
 			}
@@ -100,6 +103,7 @@ $border: 1px solid $secondary;
 			content:'';
 		}
 		.inner_btn {
+			position: relative;
 			z-index: 2;
 		}
 		@content;
@@ -130,8 +134,7 @@ $border: 1px solid $secondary;
 }
 
 .inner_btn {
-  display: inline-block;
-  position: relative;
+	display: inline-block;
   height: 100%;
   vertical-align: middle;
   &:after {
@@ -191,7 +194,7 @@ $border: 1px solid $secondary;
 		white-space: nowrap;
 	};
 	@include item_partition();
-	@include active_underline(4, $primary);
+	@include active_underline(4, $primary, fullWidth);
 	.btn_tab {
 		background-color: #fff;
 		padding: 0 20px;

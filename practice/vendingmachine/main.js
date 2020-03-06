@@ -49,6 +49,7 @@
 			if (BUDGET < itemCost02) {
 				CHANGE = BUDGET;
 				changeMoneyEl.innerHTML = CHANGE;
+				BUDGET = 0;
 				machineMoneyEl.innerHTML = 0;
 				btnItem01El.disabled = true;
 				btnItem02El.disabled = true;
@@ -63,6 +64,7 @@
 			if (BUDGET < itemCost02) {
 				CHANGE = BUDGET;
 				changeMoneyEl.innerHTML = CHANGE;
+				BUDGET = 0;
 				machineMoneyEl.innerHTML = 0;
 				btnItem01El.disabled = true;
 				btnItem02El.disabled = true;

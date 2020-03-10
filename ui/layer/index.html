@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="common.css">
 </head>
 <body>
+	<button type="button" class="btn_modal" aria-controls="modal">modal show</button>
 	Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto praesentium perferendis architecto? Unde, magni esse, tempore sed quam cumque velit similique consequatur est commodi excepturi dicta repellat perferendis laborum distinctio.
 	In inventore dolorum quos porro minus asperiores ut dignissimos nobis, et accusamus laboriosam consectetur, autem quidem eaque dolor nemo, quia exercitationem! Minus consequatur illum nihil adipisci soluta, officia laudantium dolor.
 	Perferendis, nulla! Voluptatibus iure in mollitia aspernatur fugiat, vero repellendus? Inventore, assumenda! Repudiandae ipsa nihil, laboriosam minima esse adipisci, odio alias et cum provident dolorum consequuntur, ullam at labore consequatur.
@@ -58,11 +59,11 @@
 	Ad nobis qui ullam debitis, corrupti aliquam ipsa veniam. Aperiam sequi praesentium placeat corporis alias delectus cumque, eveniet error nulla tempore asperiores dolorum laboriosam excepturi optio. Ipsa iusto id incidunt!
 	Libero cupiditate aspernatur optio quaerat quas, eius dolore! Dolores a dicta quae eaque quos, ea mollitia voluptatibus sapiente eligendi iure sit tempore ab quo perspiciatis commodi harum ut! Ipsa, est.
 	Excepturi esse dolor iste qui veniam praesentium alias sequi reprehenderit odio? Voluptates quidem, quia maxime nihil cupiditate pariatur dolore voluptatem, sapiente laudantium incidunt sequi a enim nobis sint, reprehenderit corrupti?
-	<div class="dimmed"></div>
-	<div class="layer">
+	<!-- <div class="dimmed"></div> -->
+	<div class="layer" id="modal" style="display: none;" aria-controls="modal">
 		<div class="inner_layer">
 			<div class="layer_head">
-				<button type="button">버튼</button>
+				<button type="button" aria-controls="modal">버튼</button>
 			</div>
 			<div class="layer_body">
 				<div class="inner_body">
@@ -102,17 +103,10 @@
 				</div>
 			</div>
 			<div class="layer_foot">
-				<button type="button">버튼</button>
+				<button type="button" aria-controls="modal">버튼</button>
 			</div>
 		</div>
 	</div>
-	<script>
-		(function() {
-			window.addEventListener('scroll', function(e) {
-				e.preventDefault();
-			});			
-		})();
-
-	</script>
+	<script src="layer.js"></script>
 </body>
 </html>

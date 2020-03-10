@@ -6,14 +6,24 @@ html, body {
 	height: 100%;
 }
 
-.dimmed {
+.btn_modal {
 	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background-color: rgba(0,0,0,0.8);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 12px;
+	border-radius: 8px;
+	background-color: #ffdd00;
 }
+
+// .dimmed {
+// 	position: fixed;
+// 	top: 0;
+// 	right: 0;
+// 	bottom: 0;
+// 	left: 0;
+// 	background-color: rgba(0,0,0,0.8);
+// }
 
 .layer {
 	position: fixed;
@@ -24,6 +34,15 @@ html, body {
 	text-align: center;
 	font-size: 0;
 	white-space: nowrap;
+	&::before {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: rgba(0,0,0,.8);
+		content: '';
+	}
 	&:after {
 		content:'';
 		display: inline-block;
@@ -45,6 +64,9 @@ html, body {
 	vertical-align: middle;
 	white-space: normal;
 }
+.test {
+	overflow-y: auto;
+}
 
 .layer_head {
 	position: absolute;
@@ -56,8 +78,8 @@ html, body {
 }
 .layer_body {
 	overflow-y: auto;
-	min-height: 100px;
-	max-height: 100%;
+	// min-height: 100px;
+	// max-height: 100%;
 }
 .layer_foot {
 	position: absolute;

@@ -67,12 +67,10 @@ html, body { height: 100%; }
 
 .layer:after { content: ''; display: inline-block; height: 100%; vertical-align: middle; }
 
-.inner_layer { display: inline-block; position: relative; min-width: 200px; max-width: 80%; max-height: 80%; padding: 30px 0; font-size: initial; background-color: #fff; text-align: initial; vertical-align: middle; white-space: normal; }
-
-.test { overflow-y: auto; }
+.inner_layer { display: inline-block; position: relative; max-width: 80%; padding: 30px 0; font-size: initial; background-color: #fff; text-align: initial; vertical-align: middle; white-space: normal; }
 
 .layer_head { position: absolute; top: 0; right: 0; left: 0; height: 30px; background-color: pink; }
 
-.layer_body { overflow-y: auto; }
+.layer_body { overflow-y: auto; max-height: 500px; }
 
 .layer_foot { position: absolute; bottom: 0; right: 0; left: 0; height: 30px; background-color: skyblue; }

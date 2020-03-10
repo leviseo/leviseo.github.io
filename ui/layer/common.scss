@@ -54,18 +54,15 @@ html, body {
 .inner_layer {
 	display: inline-block;
 	position: relative;
-	min-width: 200px;
+	// min-width: 200px;
 	max-width: 80%;
-	max-height: 80%;
+	// max-height: 80%;
 	padding: 30px 0;
 	font-size: initial;
 	background-color: #fff;
 	text-align: initial;
 	vertical-align: middle;
 	white-space: normal;
-}
-.test {
-	overflow-y: auto;
 }
 
 .layer_head {
@@ -76,8 +73,10 @@ html, body {
 	height: 30px;
 	background-color: pink;
 }
+
 .layer_body {
 	overflow-y: auto;
+	max-height: 500px;
 	// min-height: 100px;
 	// max-height: 100%;
 }

@@ -38,6 +38,6 @@ address, caption, cite, code, dfn, em, var { font-style: normal; font-weight: no
 
 input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
 
-button { padding: 8px; border: 1px solid #eaeaea; }
+.btn_insert, .btn_confirm, .tf_coin, button { padding: 8px; border: 1px solid #eaeaea; }
 
-button:disabled { background-color: #dddddd; cursor: no-drop; }
+.btn_insert:disabled, .btn_confirm:disabled, .tf_coin:disabled, button:disabled { background-color: #dddddd; cursor: no-drop; }

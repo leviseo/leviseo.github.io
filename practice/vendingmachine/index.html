@@ -10,23 +10,17 @@
 <body>
 	<div class="container">
 		<h1>자판기</h1>
-		<div>
+		<!-- <form id="insertCoin">
 			<input type="number" class="tf_coin">
-			<button type="button" class="btn_insert">돈 투입</button>
-		</div>
-		<div>
-			<p>자판기가 가지고있는 돈 : <span class="txt_machine"></span></p>
-		</div>
-		<div>
-			<button type="button" class="btn_item01" disabled>사이다 800원</button>
-			<button type="button" class="btn_item02" disabled>콜라 700원</button>
-		</div>
-		<div>
-			<p>사이다 : <span class="count_item01"></span></p>
-			<p>콜라 : <span class="count_item02"></span></p>
-			<p>거스름돈 : <span class="txt_change"></span></p>
-		</div>
+			<input type="submit" name="" id="" value="돈 투입" class="btn_insert">
+		</form> -->
+		
+		<p>자판기가 가지고있는 돈 : <span class="txt_money"></span></p>
+	
+		<div class="items"></div>
+		<div class="cart"></div>
+		<button class="btn_confirm">계산하기</button>
 	</div>
-	<script src="main.js"></script>
+	<script src="vm.js"></script>
 </body>
 </html>

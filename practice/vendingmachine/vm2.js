@@ -97,3 +97,4 @@ ElconfirmBtn.addEventListener('click', ()=> {
 	})
 	alert(`거스름돈 ${vm.money}원 \n${result}`)
 })
+

@@ -1,6 +1,7 @@
 // el
 var ctx = document.querySelector(".container");
 var ElMoney = ctx.querySelector(".txt_money");
+var ElInitMoney = ctx.querySelector(".txt_init");
 var ElItems = ctx.querySelector(".items");
 var ElCart = ctx.querySelector(".cart");
 var ElconfirmBtn = document.getElementById("confirm")
@@ -10,16 +11,34 @@ function VendingMachine(money, items) {
 	this.money = money;
 	this.cart = [];
 	this.items = items;
+
+	items.forEach(function(item) {
+		item.btn.addEventListener('click', function() {
+			var change = Number(money - item.price);
+			checkMoney(change, items);
+			money = change;
+			ElMoney.innerHTML = change;
+			console.log(change);
+		})
+	});
+
+	function checkMoney(change, items) {
+		items.forEach(function(item) {
+			if (change < item.price) {
+				item.btn.disabled = true;
+			}
+		});
+	}
 }
 
 function Drink(name, price) {
 	this.name = name;
 	this.price = price;
-	this.btn = makeBtn();
+	this.btn = makeBtn(name, price);
 
-	function makeBtn() {
+	function makeBtn(name, price) {
 		var ElBtn = document.createElement('button')
-		ElBtn.innerHTML = this.name + this.price;
+		ElBtn.innerHTML = name + ' ' + price;
 		ElBtn.className = "item"
 		return ElBtn
 	};
@@ -29,8 +48,13 @@ var vm = new VendingMachine(10000, [new Drink("콜라", 700), new Drink("사이�
 
 console.log(vm);
 
+ElInitMoney.innerHTML = vm.money;
 
-
+vm.items.forEach(function(item) {
+	if (vm.money >= item.price) {
+		ElItems.appendChild(item.btn);
+	}
+});
 
 // class VendingMachine {
 // 	constructor(money, items) {

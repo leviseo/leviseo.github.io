@@ -1,0 +1,19 @@
+@charset "utf-8";
+@import "_reset.scss";
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+}
+
+.btn_insert,
+.btn_confirm,
+.tf_coin,
+button {
+	padding: 8px;
+	border: 1px solid #eaeaea;
+	&:disabled {
+		background-color: #dddddd;
+		cursor: no-drop;
+	}
+}

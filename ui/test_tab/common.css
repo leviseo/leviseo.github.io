@@ -1,0 +1,132 @@
+@charset "UTF-8";
+/* reset */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, th, td, input, select, button { margin: 0; padding: 0; }
+
+fieldset, img { border: 0 none; }
+
+dl, ul, ol, menu, li { list-style: none; }
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+
+input, select, textarea, button { vertical-align: middle; font-size: 100%; }
+
+button { border: 0 none; background-color: transparent; cursor: pointer; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+body { -webkit-text-size-adjust: none; }
+
+/* 뷰포트 변환시 폰트크기 자동확대 방지. */
+input:checked[type='checkbox'] { background-color: #666; -webkit-appearance: checkbox; }
+
+input[type='text'], input[type='password'], input[type='submit'], input[type='search'], input[type='tel'], input[type='email'], html input[type='button'], input[type='reset'] { -webkit-appearance: none; border-radius: 0; }
+
+input[type='search']::-webkit-search-cancel-button { -webkit-appearance: none; }
+
+body { background: #fff; }
+
+body, th, td, input, select, textarea, button { font-size: 14px; line-height: 1.5; font-family: 'Malgun Gothic','맑은 고딕',sans-serif; color: #333; }
+
+/* color값은 디자인가이드에 맞게사용 */
+a { color: #333; text-decoration: none; }
+
+a:active, a:hover { text-decoration: none; }
+
+address, caption, cite, code, dfn, em, var { font-style: normal; font-weight: normal; }
+
+/* global */
+#kakaoIndex { overflow: hidden; position: absolute; left: -9999px; width: 0; height: 1px; margin: 0; padding: 0; }
+
+/* 스킵네비게이션 */
+/*.ir_pm{display:block;overflow:hidden;font-size:0;line-height:0;text-indent:-9999px}  PC용 사용된 이미지내 의미있는 텍스트의 대체텍스트를 제공할때 */
+.ir_pm { display: block; overflow: hidden; font-size: 1px; line-height: 0; color: transparent; }
+
+/* Mobile용 사용된 이미지내 의미있는 텍스트의 대체텍스트를 제공할때 */
+.ir_wa { display: block; overflow: hidden; position: relative; z-index: -1; width: 100%; height: 100%; }
+
+/* 중요한 이미지 대체텍스트로 이미지off시에도 대체 텍스트를 보여주고자 할때 */
+.ir_caption { overflow: hidden; width: 1px; font-size: 1px; line-height: 0; text-indent: -9999px; }
+
+/* Table caption에 숨김텍스트를 제공할때 */
+.screen_out { overflow: hidden; position: absolute; width: 0; height: 0; line-height: 0; text-indent: -9999px; }
+
+/* 대체텍스트가 아닌 접근성을 위한 숨김텍스트를 제공할때 */
+.show { display: block; }
+
+.hide { display: none; }
+
+html, body { height: 100%; }
+
+button { outline: 0 none; }
+
+.container { max-width: 1280px; margin: 0 auto; padding: 20px; background-color: #f2f2f2; }
+
+.container h2 { margin-bottom: 16px; }
+
+.container h2:not(:first-child) { margin-top: 40px; }
+
+.btn_tab { display: block; position: relative; width: 100%; height: 100%; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.inner_btn { display: inline-block; height: 100%; vertical-align: middle; }
+
+.inner_btn:after { display: inline-block; height: 100%; vertical-align: middle; content: ""; }
+
+.inner_btn .txt_tab { display: inline-block; vertical-align: middle; }
+
+.group_tab { background-color: #fff; }
+
+.group_tab .list_tab { display: table; table-layout: fixed; width: 100%; height: 100%; }
+
+.group_tab .list_tab li { display: table-cell; height: 100%; text-align: center; vertical-align: middle; }
+
+.group_tab .on .inner_btn { position: relative; }
+
+.group_tab .on .inner_btn:before { position: absolute; bottom: 0; right: 0; left: 0; height: 4px; background-color: #ffdd00; vertical-align: middle; content: ""; }
+
+.group_tab li ~ li .btn_tab { border-left: 1px solid pink; }
+
+.group_tab li:first-child .btn_tab { padding-left: 20px; }
+
+.group_tab li:last-child .btn_tab { padding-right: 20px; }
+
+.group_tab_type2 .list_tab { font-size: 0; }
+
+.group_tab_type2 .list_tab li { display: inline-block; vertical-align: middle; }
+
+.group_tab_type2 .list_tab { position: relative; }
+
+.group_tab_type2 .list_tab:after { position: absolute; bottom: 0; right: 0; left: 0; height: 1px; background-color: #a9a9a9; content: ''; }
+
+.group_tab_type2 li ~ li { margin-left: 2px; }
+
+.group_tab_type2 .btn_tab { z-index: 10; padding: 0 10px; border: 1px solid #a9a9a9; border-radius: 5px 5px 0 0; background-color: #fff; }
+
+.group_tab_type2 .on { border-color: #ffdd00; }
+
+.group_tab_type2 .on:after { position: absolute; top: 0; right: -1px; bottom: 0; left: -1px; z-index: 1; background-color: #ffdd00; content: ''; }
+
+.group_tab_type2 .on .inner_btn { position: relative; z-index: 2; }
+
+.group_tab_type3 .list_tab { display: table; table-layout: fixed; width: 100%; height: 100%; table-layout: auto; overflow: hidden; border-radius: 20px; background-color: #fff; }
+
+.group_tab_type3 .list_tab li { display: table-cell; height: 100%; text-align: center; vertical-align: middle; }
+
+.group_tab_type3 li ~ li .btn_tab { border-left: 1px solid pink; }
+
+.group_tab_type3 .on:after { position: absolute; top: 0; right: -1px; bottom: 0; left: -1px; z-index: 1; background-color: #ffdd00; content: ''; }
+
+.group_tab_type3 .on .inner_btn { position: relative; z-index: 2; }
+
+.group_tab_type4 { overflow-x: auto; }
+
+.group_tab_type4 .list_tab { font-size: 0; white-space: nowrap; }
+
+.group_tab_type4 .list_tab li { display: inline-block; vertical-align: middle; }
+
+.group_tab_type4 li ~ li .btn_tab { border-left: 1px solid pink; }
+
+.group_tab_type4 .on .inner_btn:before { position: absolute; bottom: 0; right: 0; left: 0; height: 4px; background-color: #ffdd00; vertical-align: middle; content: ""; }
+
+.group_tab_type4 .btn_tab { background-color: #fff; padding: 0 20px; word-break: break-all; }

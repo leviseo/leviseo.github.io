@@ -1,0 +1,42 @@
+.skin_view .area_view { padding: 20px 0px; }
+.skin_view .area_view p { font-size: 16px; line-height: 28px; margin: 0px auto 28px; }
+.skin_view .area_view a { color: rgb(61, 179, 158); }
+.skin_view .area_view h1, .skin_view .area_view h2, .skin_view .area_view h3, .skin_view .area_view h4 { line-height: 1.2em; margin: 1.5em auto 1em; }
+.skin_view .area_view h1 { font-size: 28px; }
+.skin_view .area_view h2 { font-size: 24px; }
+.skin_view .area_view h3 { font-size: 20px; }
+.skin_view .area_view h4 { font-size: 16px; }
+.skin_view .area_view ul, .skin_view .area_view ol { margin: 0px auto 32px; padding: 0px 0px 0px 10px; }
+.skin_view .area_view ul li, .skin_view .area_view ol li { margin-left: 24px; margin-bottom: 10px; }
+.skin_view .area_view ul li { list-style: disc; }
+.skin_view .area_view ol li { list-style: decimal; }
+.skin_view .area_view blockquote { padding: 10px 20px; margin: 0px auto 28px; border-left: 5px solid rgb(238, 238, 238); }
+.skin_view .area_view blockquote, .skin_view .area_view blockquote p { font-size: 18px; line-height: 30px; }
+.skin_view .area_view blockquote ol:last-child, .skin_view .area_view blockquote ul:last-child, .skin_view .area_view blockquote p:last-child { margin-bottom: 0px; }
+.skin_view .area_view pre { background-color: rgb(246, 247, 248); margin: 28px auto; overflow-wrap: break-word; font-family: Menlo, Consolas, Monaco, monospace; font-size: 14px; line-height: 20px; }
+.skin_view .area_view pre code.hljs { padding: 16px; }
+.skin_view .area_view iframe { max-width: 100%; }
+.skin_view .area_view img { max-width: 100%; height: auto; }
+.skin_view .area_view .imageblock { width: auto !important; height: auto !important; }
+.skin_view .area_view .protected_form { text-align: center; padding: 100px 0px 150px; border-bottom: 1px solid rgb(235, 235, 235); margin-bottom: -20px; }
+.skin_view .area_view .protected_form input { appearance: none; padding: 0px 15px; border: 1px solid rgb(238, 238, 238); height: 38px; line-height: 38px; font-size: 12px; box-sizing: border-box; }
+.skin_view .area_view .protected_form button { border-radius: 4px; font-size: 12px; line-height: 38px; background-color: rgb(61, 179, 158); color: rgb(255, 255, 255); font-weight: bold; padding: 0px 16px; }
+.skin_view .area_etc { overflow: hidden; min-height: 29px; margin-top: 20px; }
+.skin_view .area_etc .list_tag { float: left; margin-top: 5px; font-weight: bold; }
+.skin_view .list_tag .tit_tag { float: left; margin-right: 8px; font-weight: bold; font-size: 12px; color: rgb(61, 179, 158); }
+.skin_view .list_tag .desc_tag { float: left; margin-right: 2px; font-weight: bold; font-size: 12px; color: rgb(170, 170, 170); max-width: 630px; }
+.skin_view .list_tag .desc_tag a { color: rgb(170, 170, 170); }
+.skin_view .list_tag .link_tag { font-weight: bold; font-size: 12px; color: rgb(170, 170, 170); }
+.skin_view .list_tag .link_tag:hover { text-decoration: none; }
+.skin_view .another_category { overflow: hidden; width: 100%; margin: 90px 0px 0px; border: 0px; padding: 0px; }
+.skin_view .another_category h4 { float: left; width: 100%; font-weight: normal; line-height: 1.5; padding: 0px 0px 7px !important; border-bottom: 1px solid rgb(238, 238, 238) !important; font-size: 14px !important; color: rgb(102, 102, 102) !important; }
+.skin_view .another_category h4 a { font-weight: bold; color: rgb(61, 179, 158) !important; }
+.skin_view .another_category table { float: left; width: 100%; margin-top: 15px !important; }
+.skin_view .another_category table tr { float: left; width: 50%; margin-bottom: 8px; }
+.skin_view .another_category table tr:nth-child(2n) th { padding-left: 10px !important; }
+.skin_view .another_category table th { width: 100%; font-size: 12px; color: rgb(170, 170, 170); padding: 0px !important; }
+.skin_view .another_category table th a { overflow: hidden; max-width: 255px; font-size: 12px; white-space: nowrap; text-overflow: ellipsis; display: inline-block; float: left; color: rgb(102, 102, 102) !important; border: 0px !important; }
+.skin_view .another_category table th a.current { text-decoration: underline !important; }
+.skin_view .another_category table th span { font-size: 12px; }
+.skin_view .another_category table td { display: none; }
+.skin_view .area_reply { margin-top: 40px; }

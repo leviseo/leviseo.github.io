@@ -57,7 +57,7 @@ address, caption, cite, code, dfn, em, var { font-style: normal; font-weight: no
 
 .hide { display: none; }
 
-.container { max-width: 80%; margin: 0 auto; }
+#container { margin: 0 auto; padding: 10px; }
 
 .group_tabs { display: table; width: 100%; table-layout: fixed; }
 
@@ -65,7 +65,7 @@ address, caption, cite, code, dfn, em, var { font-style: normal; font-weight: no
 
 .group_tabs .btn_tab.on { background-color: darkslategray; font-weight: 500; color: #fff; }
 
-.tab_content { display: none; min-height: 400px; max-height: 400px; padding: 20px; border: 1px solid #dedede; background-color: papayawhip; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.tab_content { display: none; min-height: 100px; max-height: 400px; padding: 20px; border: 1px solid #dedede; background-color: papayawhip; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .tab_content.visible { display: block; }
 
@@ -78,4 +78,12 @@ address, caption, cite, code, dfn, em, var { font-style: normal; font-weight: no
 .pagenation .btn_prev:disabled, .pagenation .btn_next:disabled, .pagenation .disabled.btn_prev, .pagenation .disabled.btn_next { background-color: #eaeaea; opacity: 0.4; cursor: no-drop; }
 
 /*  마구 추가 한 */
-.btn_alert { padding: 10px; border: 1px solid seagreen; }
+.group_test { display: -webkit-box; display: -ms-flexbox; display: flex; padding-top: 10px; }
+
+.group_test.group_btn { -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; }
+
+.group_test .link_test { text-decoration: underline; }
+
+.group_test .btn_test { padding: 10px; border: 1px solid seagreen; border-radius: 2px; font-weight: bold; color: darkgreen; }
+
+.group_test .btn_test + .btn_test { margin-left: 6px; }

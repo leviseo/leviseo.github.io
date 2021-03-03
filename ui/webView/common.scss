@@ -3,9 +3,9 @@
 @import '../_shared/mixin.scss';
 @import '../_shared/reset.scss';
 
-.container {
-	max-width: 80%;
+#container {
 	margin: 0 auto;
+	padding: 10px;
 }
 
 .group_tabs {
@@ -32,7 +32,7 @@
 
 .tab_content {
 	display: none;
-	min-height: 400px;
+	min-height: 100px;
 	max-height: 400px;
 	padding: 20px;
 	border: 1px solid #dedede;
@@ -74,7 +74,27 @@
 }
 
 /*  마구 추가 한 */
-.btn_alert {
-	padding: 10px;
-	border: 1px solid seagreen;
+.group_test {
+	display: flex;
+	padding-top: 10px;
+	
+	&.group_btn {
+		flex: 1 1 auto;
+	}
+
+	.link_test {
+		text-decoration: underline;
+	}
+	
+	.btn_test {
+		padding: 10px;
+		border: 1px solid seagreen;
+		border-radius: 2px;
+		font-weight: bold;
+		color: darkgreen;
+		
+		& + .btn_test {
+			margin-left: 6px;
+		}
+	}
 }

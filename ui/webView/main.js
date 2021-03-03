@@ -106,5 +106,11 @@
 			})	
 		}
 
+		// webView Action Sheet
+		function showActionSheet() {
+			// alert('show action sheet click')
+			document.body.style.backgroundColor = "#000000"
+		}
+
 //   };
 // })();

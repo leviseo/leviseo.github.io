@@ -6,12 +6,12 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="common.css">
-	<title>tabs</title>
+	<title>WebView Test</title>
 </head>
 
 <body>
-	<h1>01. tabs</h1>
 	<div id="container">
+		<h1>WebView Test</h1>
 		<div class="group_tabs">
 			<button type="button" id="tab1" class="btn_tab on">탭1</button>
 			<button type="button" id="tab2" class="btn_tab">탭2</button>
@@ -31,6 +31,22 @@
 		<div class="pagenation">
 			<button type="button" class="btn_prev">&lt;</button>
 			<button type="button" class="btn_next">&gt;</button>
+		</div>
+		
+		<!-- webView test -->
+		<hr>
+		<h2>버튼 친구들</h2>
+		<div class="group_test">
+			<a href="https://www.daum.net" target="_blank" class="link_test">3D touch 제거 테스트를 위한 a 링크 🔗</a>
+		</div>
+		
+		<div class="group_test group_btn">
+			<button class="btn_test" onclick="window.open('https://www.daum.net')">window.open</button>
+			<button class="btn_test" onclick="alert('알럿 메세지 - 타이틀\n디폴트 버튼은 확인임')">alert</button>
+			<button class="btn_test" onclick="confirm('컨펌 메세지')">confirm</button>
+			<button class="btn_test" onclick="prompt()">prompt</button>
+
+			<button class="btn_test" onclick="showActionSheet()">action sheet</button>
 		</div>
 	</div>
 	<script src="main.js"></script>

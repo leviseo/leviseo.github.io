@@ -3,37 +3,107 @@
 
 <head>
 	<meta charset="UTF-8">
-	<!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"> -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Tabs Design</title>
 	<link rel="stylesheet" href="common.css">
-	<title>tabs</title>
 </head>
 
 <body>
-	<h1>01. tabs</h1>
-	<div id="container">
-		<div class="group_tabs">
-			<button type="button" id="tab1" class="btn_tab on">탭1</button>
-			<button type="button" id="tab2" class="btn_tab">탭2</button>
-			<button type="button" id="tab3" class="btn_tab">탭3</button>
+	<h1>Tab</h1>
+	<div class="container">
+		<h2>item 1/n</h2>
+		<div class="group_tab">
+			<ul class="list_tab" role="tablist">
+				<li>
+					<button type="button" class="btn_tab on">
+						<span class="inner_btn"><span class="txt_tab">tab01 Lorem ipsum dolor</span></span>
+					</button>
+				</li>
+				<li>
+					<button type="button" class="btn_tab">
+						<span class="inner_btn"><span class="txt_tab">tab02</span></span>
+					</button>
+				</li>
+				<li>
+					<button type="button" class="btn_tab">
+						<span class="inner_btn"><span class="txt_tab">tab03 Lorem ipsum dolor sit amet consectetur adipisicing elit</span></span>
+					</button>
+				</li>
+				<li>
+					<button type="button" class="btn_tab">
+						<span class="inner_btn"><span class="txt_tab">tab04</span></span>
+					</button>
+				</li>
+			</ul>
 		</div>
-		<div class="group_tab_contents">
-			<div id="tab_content1" class="tab_content visible">
-				<h2>탭 컨텐츠 1</h2>
-			</div>
-			<div id="tab_content2" class="tab_content">
-				<h2>탭 컨텐츠 2</h2>
-			</div>
-			<div id="tab_content3" class="tab_content">
-				<h2>탭 컨텐츠 3</h2>
-			</div>
+		<h2>item 유동 button-group</h2>
+		<div class="group_tab_type3">
+			<ul class="list_tab" role="tablist">
+				<li>
+					<button type="button" class="btn_tab on">
+						<span class="inner_btn"><span class="txt_tab">tab01 적당하게</span></span>
+					</button>
+				</li>
+				<li>
+					<button type="button" class="btn_tab">
+						<span class="inner_btn"><span class="txt_tab">tab02</span></span>
+					</button>
+				</li>
+				<li>
+					<button type="button" class="btn_tab">
+						<span class="inner_btn"><span class="txt_tab">tab03 적당한 텍스트</span></span>
+					</button>
+				</li>
+				<li>
+					<button type="button" class="btn_tab">
+						<span class="inner_btn"><span class="txt_tab">tab04</span></span>
+					</button>
+				</li>
+			</ul>
 		</div>
-		<div class="pagenation">
-			<button type="button" class="btn_prev">&lt;</button>
-			<button type="button" class="btn_next">&gt;</button>
+		<h2>item 유동 scroll-x</h2>
+		<div class="group_tab_type4">
+			<ul class="list_tab" role="tablist">
+				<li><button type="button" class="btn_tab on"><span class="inner_btn"><span class="txt_tab">tab01</span></span></button></li>
+				<li><button type="button" class="btn_tab"><span class="inner_btn"><span class="txt_tab">tab02</span></span></button></li>
+				<li><button type="button" class="btn_tab"><span class="inner_btn"><span class="txt_tab">tab03</span></span></button></li>
+				<li><button type="button" class="btn_tab"><span class="inner_btn"><span class="txt_tab">tab04</span></span></button></li>
+				<li><button type="button" class="btn_tab"><span class="inner_btn"><span class="txt_tab">tab05</span></span></button></li>
+				<li><button type="button" class="btn_tab"><span class="inner_btn"><span class="txt_tab">tab06 Lorem ipsum dolor sit amet</span></span></button></li>
+				<li><button type="button" class="btn_tab"><span class="inner_btn"><span class="txt_tab">tab07 Lorem ipsum dolor sit amet</span></span></button></li>
+				<li><button type="button" class="btn_tab"><span class="inner_btn"><span class="txt_tab">tab08 Lorem ipsum dolor sit amet</span></span></button></li>
+				<li><button type="button" class="btn_tab"><span class="inner_btn"><span class="txt_tab">tab09 Lorem ipsum dolor sit amet</span></span></button></li>
+				<li><button type="button" class="btn_tab"><span class="inner_btn"><span class="txt_tab">tab10 Lorem ipsum dolor sit amet</span></span></button></li>
+			</ul>
+		</div>
+		<h2>item 유동</h2>
+		<div class="group_tab_type2">
+			<ul class="list_tab" role="tablist">
+				<li>
+					<button type="button" class="btn_tab on">
+						<span class="inner_btn"><span class="txt_tab">tab01</span></span>
+					</button>
+				</li>
+				<li>
+					<button type="button" class="btn_tab">
+						<span class="inner_btn"><span class="txt_tab">tab02 글자 수</span></span>
+					</button>
+				</li>
+				<li>
+					<button type="button" class="btn_tab">
+						<span class="inner_btn"><span class="txt_tab">tab03</span></span>
+					</button>
+				</li>
+				<li>
+					<button type="button" class="btn_tab">
+						<span class="inner_btn"><span class="txt_tab">tab04</span></span>
+					</button>
+				</li>
+			</ul>
 		</div>
 	</div>
 	<script src="main.js"></script>
 </body>
+
 </html>

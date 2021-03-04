@@ -2,6 +2,10 @@
 
 @import '../_shared/mixin.scss';
 @import '../_shared/reset.scss';
+body {
+	// -webkit-user-select:  none;
+	// -webkit-touch-callout: none;
+}
 
 #container {
 	margin: 0 auto;
@@ -77,6 +81,7 @@
 .group_test {
 	display: flex;
 	padding-top: 10px;
+	flex-wrap: wrap;
 	
 	&.group_btn {
 		flex: 1 1 auto;
@@ -88,13 +93,10 @@
 	
 	.btn_test {
 		padding: 10px;
+		margin: 5px;
 		border: 1px solid seagreen;
 		border-radius: 2px;
 		font-weight: bold;
 		color: darkgreen;
-		
-		& + .btn_test {
-			margin-left: 6px;
-		}
 	}
 }

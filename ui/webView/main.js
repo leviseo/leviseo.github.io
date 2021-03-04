@@ -112,5 +112,8 @@
 			document.body.style.backgroundColor = "#000000"
 		}
 
+		function showLoading() {
+		}
+
 //   };
 // })();

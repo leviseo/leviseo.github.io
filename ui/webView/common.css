@@ -78,12 +78,10 @@ address, caption, cite, code, dfn, em, var { font-style: normal; font-weight: no
 .pagenation .btn_prev:disabled, .pagenation .btn_next:disabled, .pagenation .disabled.btn_prev, .pagenation .disabled.btn_next { background-color: #eaeaea; opacity: 0.4; cursor: no-drop; }
 
 /*  마구 추가 한 */
-.group_test { display: -webkit-box; display: -ms-flexbox; display: flex; padding-top: 10px; }
+.group_test { display: -webkit-box; display: -ms-flexbox; display: flex; padding-top: 10px; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 
 .group_test.group_btn { -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; }
 
 .group_test .link_test { text-decoration: underline; }
 
-.group_test .btn_test { padding: 10px; border: 1px solid seagreen; border-radius: 2px; font-weight: bold; color: darkgreen; }
-
-.group_test .btn_test + .btn_test { margin-left: 6px; }
+.group_test .btn_test { padding: 10px; margin: 5px; border: 1px solid seagreen; border-radius: 2px; font-weight: bold; color: darkgreen; }

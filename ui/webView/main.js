@@ -108,12 +108,8 @@
 
 		// webView Action Sheet
 		function showActionSheet() {
-			// alert('show action sheet click')
-			document.body.style.backgroundColor = "#000000"
+			// swift 내 함수 실행하려면 아래와 같이
+			window.webkit.messageHandlers.test.postMessage('성공');
 		}
-
-		function showLoading() {
-		}
-
 //   };
 // })();

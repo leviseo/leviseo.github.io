@@ -107,9 +107,9 @@
 		}
 
 		// webView Action Sheet
-		function showActionSheet() {
+		function newWebViewPresent() {
 			// swift 내 함수 실행하려면 아래와 같이
-			window.webkit.messageHandlers.test.postMessage('성공');
+			window.webkit.messageHandlers.newWebView.postMessage('성공');
 		}
 //   };
 // })();

@@ -37,7 +37,10 @@
 		<hr>
 		<h2>버튼 친구들</h2>
 		<div class="group_test">
-			<a href="https://www.daum.net" target="_blank" class="link_test">3D touch 제거 테스트를 위한 a 링크 🔗</a>
+			<a href="https://www.daum.net" target="_blank" class="link_test">[target="Blank"] 3D touch 제거 테스트를 위한 a 링크 🔗</a>
+		</div>
+		<div class="group_test">
+			<a href="https://www.naver.com" class="link_test">[target="self"]D touch 제거 테스트를 위한 a 링크 🔗</a>
 		</div>
 		
 		<div class="group_test group_btn">
@@ -46,17 +49,34 @@
 			<button class="btn_test" onclick="confirm('컨펌 메세지')">confirm</button>
 			<button class="btn_test" onclick="prompt()">prompt</button>
 
-			<button class="btn_test" onclick='showActionSheet()'>action sheet</button>
+			<button class="btn_test" onclick='newWebViewPresent()'>newWebViewPresent</button>
 		</div>
+		
 		<div class="group_test">
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem atque amet commodi perspiciatis, cum quae, dolorem nihil impedit unde nesciunt saepe inventore reprehenderit ad fuga explicabo omnis minus delectus ducimus.
 		</div>
-		<div class="group_test">
-			<input type="date" name="bday" required pattern="\d{4}-\d{2}-\d{2}">
-		</div>
 
-		<div>
-			<input type="text">
+		<div class="group_test">
+			<form action="#none" lang="ko">
+				<fieldset class="group_teset">
+					<label for="dateType">date</label>
+					<input type="date" id="dateType" required pattern="\d{4}-\d{2}-\d{2}">
+				</fieldset>
+
+				<fieldset class="group_test">
+					<label for="searchType">search</label>
+					<input type="search" id="searchType" placeholder="search type">
+				</fieldset>
+
+				<fieldset class="group_test">
+					<label for="textType">Text</label>
+					<input type="text" id="textType" placeholder="text type">
+				</fieldset>
+
+				<fieldset class="group_test">
+					
+				</fieldset>
+			</form>
 		</div>
 	</div>
 	<script src="main.js"></script>

@@ -36,26 +36,28 @@
 		
 		<!-- webView test -->
 		<hr>
-		<h2>버튼 친구들</h2>
+		<h2>링크 친구들</h2>
 		<div class="group_test">
 			<a href="https://www.daum.net" target="_blank" class="link_test">[target="_blank"] 3D touch 제거 테스트를 위한 a 링크 🔗</a>
 		</div>
 		<div class="group_test">
 			<a href="https://www.naver.com" class="link_test">[target="_self"](default) 3D touch 제거 테스트를 위한 a 링크 🔗</a>
 		</div>
-		<div class="group_test">
-			<a href="https://leviseo.github.io/ui/webView/file/pdfTestDoc.pdf" class="link_test">[target="_self"] pdf Test Doc</a>
+		<div class="group_test border_top">
+			<h3>[target="_blank"]</h3>
+			<a href="https://leviseo.github.io/ui/webView/file/pdf.pdf" target="_blank" class="link_test">[target="_blank"] pdf Test</a>
+			<br>
+			<a href="https://leviseo.github.io/ui/webView/file/xlsx.xlsx" target="_blank" class="link_test">[target="_blank"] xlsx Test</a>
+			<h3>[target="_self"]</h3>
+			<a href="https://leviseo.github.io/ui/webView/file/pdf.pdf" class="link_test">[target="_self"] pdf Test Doc</a>
 		</div>
-		<div class="group_test">
-			<a href="https://leviseo.github.io/ui/webView/file/pdfTestDoc.pdf" target="_blank" class="link_test">[target="_blank"] pdf Test Doc</a>
-		</div>
-		
+		<hr>
+		<h2>버튼 친구들</h2>
 		<div class="group_test group_btn">
 			<button class="btn_test" onclick="window.open('https://www.daum.net')">window.open</button>
 			<button class="btn_test" onclick="alert('알럿 메세지 - 타이틀\n디폴트 버튼은 확인임')">alert</button>
 			<button class="btn_test" onclick="confirm('컨펌 메세지')">confirm</button>
 			<button class="btn_test" onclick="prompt()">prompt</button>
-
 			<button class="btn_test" onclick='newWebViewPresent()'>newWebViewPresent</button>
 		</div>
 		

@@ -106,10 +106,28 @@
 			})	
 		}
 
-		// webView Action Sheet
+
+		/* WebView Test 용 함수 */
+		// bottom sheet
 		function newWebViewPresent() {
 			// swift 내 함수 실행하려면 아래와 같이
 			window.webkit.messageHandlers.newWebView.postMessage('성공');
+		}
+
+		// 공유하기
+		function share() {
+			var param = { "url" : document.location.href }
+			window.webkit.messageHandlers.share.postMessage(param);
+		}
+
+		function keyboardHide() {
+			window.scrollTo(0,0);
+			document.body.scrollTop = 0;
+			console.log('test')
+		}
+
+		function test() {
+			document.body.style.backgroundColor = "red"
 		}
 //   };
 // })();

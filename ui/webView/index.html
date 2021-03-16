@@ -11,7 +11,7 @@
 </head>
 
 <body>
-	<div id="container">
+	<div id="container" class="container_index">
 		<h1>WebView Test</h1>
 		<div class="group_tabs">
 			<button type="button" id="tab1" class="btn_tab on">탭1</button>
@@ -61,6 +61,7 @@
 			<button class="btn_test" onclick="confirm('컨펌 메세지')">confirm</button>
 			<button class="btn_test" onclick="prompt()">prompt</button>
 			<button class="btn_test" onclick='newWebViewPresent()'>newWebViewPresent</button>
+			<button class="btn_test" onclick="share()">공유하기</button>
 		</div>
 		
 		<div class="group_test">
@@ -82,7 +83,12 @@
 				<fieldset class="group_test">
 					<label for="textType">Text</label>
 					<input type="text" id="textType" placeholder="text type">
-				</fieldset>				
+				</fieldset>
+				
+				<fieldset class="group_test">
+					<label for="fileType">File</label>
+					<input type="file" id="fileType" placeholder="file type">
+				</fieldset>
 			</form>
 		</div>
 	</div>

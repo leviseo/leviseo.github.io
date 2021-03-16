@@ -4,9 +4,30 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="common.css">
 	<title>secondary</title>
 </head>
-<body style="background-color:aliceblue">
+<body id="container" class="container_secondary">
 	secondary
+	<div class="group_test">
+		<fieldset class="group_test">
+			<label for="textType2">Text Type</label>
+			<input type="text" id="textType2" placeholder="text type input">
+		</fieldset>
+
+		<fieldset class="group_test">
+			<label for="numberType">Number Type</label>
+			<input type="number" id="numberType" placeholder="number type">
+		</fieldset>
+
+		<fieldset class="group_test">
+			<label for="fileType">File</label>
+			<input type="file" id="fileType" placeholder="file type">
+		</fieldset>
+	</div>
+	<div class="floating_bottom">
+		<button class="btn_confirm">confirm</button>
+		<button class="btn_cancel">cancel</button>
+	</div>
 </body>
 </html>

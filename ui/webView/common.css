@@ -90,6 +90,8 @@ body { background-color: rgba(233, 150, 122, 0.2); }
 
 .group_test .link_test { text-decoration: underline; }
 
+.group_test .longtouch_disabled { -webkit-user-select: none; -webkit-touch-callout: none; }
+
 .group_test .btn_test { padding: 10px; margin: 5px; border: 1px solid seagreen; border-radius: 2px; font-weight: bold; color: darkgreen; }
 
 .container_secondary { background-color: aliceblue; }

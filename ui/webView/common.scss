@@ -3,9 +3,9 @@
 @import '../_shared/mixin.scss';
 @import '../_shared/reset.scss';
 body {
+	background-color: rgba(darksalmon, 0.2);
 	// -webkit-user-select:  none;
 	// -webkit-touch-callout: none;
-	background-color: rgba(darksalmon, 0.2);
 }
 
 #container {
@@ -99,6 +99,11 @@ body {
 
 	.link_test {
 		text-decoration: underline;
+	}
+
+	.longtouch_disabled {
+		-webkit-user-select:  none;
+		-webkit-touch-callout: none;
 	}
 	
 	.btn_test {

@@ -61,7 +61,11 @@ body { background-color: rgba(233, 150, 122, 0.2); }
 
 #container { margin: 0 auto; }
 
-.container_index { padding: 10px; }
+.container_index { padding: 10px; /* sticky */ }
+
+.container_index .group_sticky { position: -webkit-sticky; position: sticky; top: 0; background-color: #eee; }
+
+.container_index .group_sticky .desc_sticky { padding: 10px 0; font-weight: bold; text-align: center; background-color: yellow; }
 
 .group_tabs { display: table; width: 100%; table-layout: fixed; }
 
@@ -93,6 +97,8 @@ body { background-color: rgba(233, 150, 122, 0.2); }
 .group_test .longtouch_disabled { -webkit-user-select: none; -webkit-touch-callout: none; }
 
 .group_test .btn_test { padding: 10px; margin: 5px; border: 1px solid seagreen; border-radius: 2px; font-weight: bold; color: darkgreen; }
+
+.group_test .desc_tall { font-size: 24px; line-height: 3; }
 
 .container_secondary { background-color: aliceblue; }
 

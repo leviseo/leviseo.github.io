@@ -111,13 +111,19 @@
 		// bottom sheet
 		function newWebViewPresent() {
 			// swift 내 함수 실행하려면 아래와 같이
-			window.webkit.messageHandlers.newWebView.postMessage('성공');
+			window.webkit.messageHandlers.newWebView.postMessage('');
 		}
 
 		// 공유하기
 		function share() {
 			var param = { "url" : document.location.href }
 			window.webkit.messageHandlers.share.postMessage(param);
+		}
+
+		// JS param test
+		function jsParamTest(param1, param2) {
+			var param = { "param1" : param1, "param2": param2 }
+			window.webkit.messageHandlers.jsParamTest.postMessage(param);
 		}
 
 		function keyboardHide() {
@@ -128,6 +134,7 @@
 
 		function test() {
 			document.body.style.backgroundColor = "red"
+			console.log('test')
 		}
 //   };
 // })();
